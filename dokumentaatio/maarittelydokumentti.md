@@ -16,5 +16,5 @@ Vertaisarvioinnissa voin arvioida ainakin myös Javalla toteutettuja harjoitust�
 ## Lähteet **(kesken)**
 Harjoitustyössä käytän seuraavia lähteitä:
 
-- [Damerau–Levenshtein etäisyys] (https://en.wikipedia.org/wiki/Damerau%E2%80%93Levenshtein_distance)
-- [Trie-tierakenne (Wikipedia)] (https://en.wikipedia.org/wiki/Trie)
+- [Damerau–Levenshtein etäisyys](https://en.wikipedia.org/wiki/Damerau%E2%80%93Levenshtein_distance)
+- [Trie-tierakenne (Wikipedia)](https://en.wikipedia.org/wiki/Trie)
