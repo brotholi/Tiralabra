@@ -1,5 +1,5 @@
-## Tiralabra
-### Dokumentaatio
+# Tiralabra - Kirjoitusvirheiden korjaaja
+## Dokumentaatio
 [Määrittelydokumentti](./dokumentaatio/maarittelydokumentti.md)
-### Viikkoraportit
+## Viikkoraportit
 [Viikkoraportti 1](./dokumentaatio/viikkoraportit/viikkoraportti1.md)
