@@ -1,0 +1,7 @@
+.env
+__pycache__
+venv
+.coverage
+htmlcov
+*.png
+.vscode
