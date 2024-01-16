@@ -1,5 +1,5 @@
 # Tiralabra - Kirjoitusvirheiden korjaaja
 ## Dokumentaatio
-[Määrittelydokumentti](./dokumentaatio/maarittelydokumentti.md)
+[Määrittelydokumentti](./docs/maarittelydokumentti.md)
 ## Viikkoraportit
-[Viikkoraportti 1](./dokumentaatio/viikkoraportit/viikkoraportti1.md)
+[Viikkoraportti 1](./docs/viikkoraportit/viikkoraportti1.md)
