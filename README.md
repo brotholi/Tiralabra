@@ -1,4 +1,4 @@
 ## Tiralabra
 ### Dokumentaatio
-(Määrittelydokumentti)[./dokumentaatio/maarittelydokumentti.md]
+[Määrittelydokumentti](./dokumentaatio/maarittelydokumentti.md)
 ### Viikkoraportit
