@@ -1,10 +1,10 @@
 # Määrittelydokumentti
-Tämä määrittelydokumentti määrittelee Helsingin yliopiston Algoritmit ja tekoäly -kurssilla tehtävän harjoitustyön. Suoritan kurssin Tietojenkäsittelytieteen kandiohjelmassa (TKT).
+Tämä määrittelydokumentti määrittelee Helsingin yliopiston Aineopintojen harjoitustyö: Algoritmit ja tekoäly -kurssilla tehtävän harjoitustyön. Suoritan kurssin Tietojenkäsittelytieteen kandiohjelmassa (TKT).
 
 ## Aihe
-Toteutan harjoitustyössä kirjoitusvirheiden korjaajan, joka korjaa käyttäjän antamassa tekstisyötteessa kirjoitusvirheet vertaamalla niiden eroavaisuutta Suomen kielen sanastossa oleviin sanoihin. Hyödynnän tässä merkkijonojen etäisyysmitan laskentaa, erityisesti Damerau–Levenshteinin -etäisyyttä, jonka avulla etsin ne sanat, joiden etäisyysmitta korjattavista sanoista on pienin.
+Toteutan harjoitustyössä kirjoitusvirheiden korjaajan, joka korjaa käyttäjän antamassa tekstisyötteessa kirjoitusvirheet vertaamalla niiden eroavaisuutta Suomen kielen sanastossa oleviin sanoihin. Hyödynnän tässä merkkijonojen etäisyysmitan laskentaa, Damerau–Levenshteinin -etäisyyttä, jonka avulla etsin ne sanat, joiden etäisyysmitta korjattavista sanoista on pienin.
 
- Suomen kielen sanasto talletetaan itse toteutettavaan Tre-tietorakenteeseen, jolloin eri sanojen etsiminen on suhteellisen tehokasta. Aikavaativuutena tässä etsinnässä on O(n). Olen valinnut tietorakenteen kurssin aihe-ehdotuksien määrityksien perusteella ajan säästämiseksi.
+ Suomen kielen sanasto talletetaan itse toteutettavaan Tre-tietorakenteeseen, jolloin eri sanojen etsiminen on suhteellisen tehokasta. Aikavaativuutena tässä etsinnässä on O(n). Olen valinnut kyseiset tietorakenteet ja algorimit kurssin aihe-ehdotusten perusteella ajan säästämiseksi.
 
 **(kesken)** Sovellukselle voidaan antaa käyttöliittymällä tekstiä, jonka sovellus analysoi ja korjaa suoraan tekstikenttään. Mikäli läheisiä sanoja eli ehdotuksia on useita, sovellus näyttää nämä käyttäjälle.
 
