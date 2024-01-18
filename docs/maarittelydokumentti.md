@@ -4,7 +4,7 @@ Tämä määrittelydokumentti määrittelee Helsingin yliopiston Aineopintojen h
 ## Aihe
 Toteutan harjoitustyössä kirjoitusvirheiden korjaajan, joka korjaa käyttäjän antamassa tekstisyötteessa kirjoitusvirheet vertaamalla niiden eroavaisuutta Suomen kielen sanastossa oleviin sanoihin. Hyödynnän tässä merkkijonojen etäisyysmitan laskentaa, Damerau–Levenshteinin -etäisyyttä, jonka avulla etsin ne sanat, joiden etäisyysmitta korjattavista sanoista on pienin.
 
- Suomen kielen sanasto talletetaan itse toteutettavaan Tre-tietorakenteeseen, jolloin eri sanojen etsiminen on suhteellisen tehokasta. Aikavaativuutena tässä etsinnässä on O(n). Olen valinnut kyseiset tietorakenteet ja algorimit kurssin aihe-ehdotusten perusteella ajan säästämiseksi.
+ Suomen kielen sanasto talletetaan itse toteutettavaan Tre-tietorakenteeseen, jolloin eri sanojen etsiminen on suhteellisen tehokasta. Aikavaativuutena tässä etsinnässä on O(n). Olen valinnut kyseiset tietorakenteet ja algorimit kurssin aihe-ehdotusten perusteella ajan säästämiseksi. Aiheen olen valinnut, koska olen tehnyt työkseni oikolukua ja opiskellu Suomen kieltä.
 
 **(kesken)** Sovellukselle voidaan antaa käyttöliittymällä tekstiä, jonka sovellus analysoi ja korjaa suoraan tekstikenttään. Mikäli läheisiä sanoja eli ehdotuksia on useita, sovellus näyttää nämä käyttäjälle.
 
