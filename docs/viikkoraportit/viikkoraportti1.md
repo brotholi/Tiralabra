@@ -1,6 +1,6 @@
 # Viikko 1
 
-Tällä viikolla aloitin aiheen miettimisen ja sovelluksen toteutuksen suunnittelun.Suuri osa ajasta kului myös määrittelydokumentin kirjoittamiseen ja lähteiden etsimiseen. Konfiguroin valmiiksi projektiin joitakin tyyliin ja testikattavuuteen liittyviä riippuvuuksia poetrylla ja etsin internetistä avoimia tietolähteitä suomen kielen sanastolle.
+Tällä viikolla aloitin aiheen miettimisen ja sovelluksen toteutuksen suunnittelun. Suuri osa ajasta kului myös määrittelydokumentin kirjoittamiseen ja lähteiden etsimiseen. Konfiguroin valmiiksi projektiin joitakin tyyliin ja testikattavuuteen liittyviä riippuvuuksia poetrylla ja etsin internetistä avoimia tietolähteitä suomen kielen sanastolle.
 
 Lisäksi tein itselleni alustavaa suunnitelmaa siitä, mitä aion koodata ensimmäisenä ja miten saisin ensi viikolla jo ensimmäisen minimiversion projektista pyörimään. Suunnitelmissa on lähteä ensin toteuttamaan sovellukselle alustava käyttöliittymä sekä ensimmäinen versio Damerau–Levenshteinin -etäisyyttä käyttävästä algoritmista, joka vertailee käyttäjän sanoja sanastoon ja tälle erilaisia testejä. 
 
