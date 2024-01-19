@@ -2,11 +2,9 @@
 Tämä määrittelydokumentti määrittelee Helsingin yliopiston Aineopintojen harjoitustyö: Algoritmit ja tekoäly -kurssilla tehtävän harjoitustyön. Suoritan kurssin Tietojenkäsittelytieteen kandiohjelmassa (TKT).
 
 ## Aihe
-Toteutan harjoitustyössä kirjoitusvirheiden korjaajan, joka korjaa käyttäjän antamassa tekstisyötteessa kirjoitusvirheet vertaamalla niiden eroavaisuutta Suomen kielen sanastossa oleviin sanoihin. Hyödynnän tässä merkkijonojen etäisyysmitan laskentaa, Damerau–Levenshteinin -etäisyyttä, jonka avulla etsin ne sanat, joiden etäisyysmitta korjattavista sanoista on pienin.
+Toteutan harjoitustyössä kirjoitusvirheiden korjaajan, joka korjaa käyttäjän antamassa tekstisyötteessa kirjoitusvirheet vertaamalla niiden eroavaisuutta Suomen kielen sanastossa oleviin sanoihin. Hyödynnän virheiden etsimmässä merkkijonojen etäisyysmitan laskentaa, Damerau–Levenshteinin -etäisyyttä, jonka avulla etsin ne sanat, joiden etäisyysmitta korjattavista sanoista on pienin. Suomen kielen sanasto talletetaan itse toteutettavaan Tre-tietorakenteeseen, jolloin eri sanojen etsiminen on suhteellisen tehokasta. Olen valinnut kyseiset tietorakenteet ja algorimit kurssin aihe-ehdotusten perusteella ajan säästämiseksi.
 
- Suomen kielen sanasto talletetaan itse toteutettavaan Tre-tietorakenteeseen, jolloin eri sanojen etsiminen on suhteellisen tehokasta. Olen valinnut kyseiset tietorakenteet ja algorimit kurssin aihe-ehdotusten perusteella ajan säästämiseksi. Aiheen olen valinnut, koska olen tehnyt työkseni oikolukua ja opiskellut Suomen kieltä.
-
-**(kesken)** Sovellukselle voidaan antaa käyttöliittymällä tekstisyötteenä sanoja, jotka analysoidaan vertaamalla niiden etäisyyttä sanastossa oleviin sanoihin. Sovellus antaa korjausehdotuksen kertomalla sanat, joita kirjoitettu sana on lähimpänä. Ainakin ensimmäisessä toteutuksessa sovellukselle voidaan antaa kerrallaan yksi sana, jonka se analysoi, ja ehdotuksia lähellä olevista sanoista voi olla useampi kuin yksi.
+Sovellukselle voidaan antaa käyttöliittymällä tekstisyötteenä sanoja, jotka analysoidaan vertaamalla niiden etäisyyttä sanastossa oleviin sanoihin. Sovellus antaa korjausehdotuksen kertomalla ne sanat, joita kirjoitettu sana on lähimpänä. Ainakin ensimmäisessä toteutuksessa sovellukselle voi antaa kerrallaan vain yhden sanan, jonka se analysoi.
 
 ## Ohjelmointikielet
 Harjoitustyö totetetaan Pythonilla.
