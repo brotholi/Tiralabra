@@ -22,7 +22,7 @@ Harjoitustyössä käytän seuraavia lähteitä:
 
 - [Damerau–Levenshtein etäisyys](https://en.wikipedia.org/wiki/Damerau%E2%80%93Levenshtein_distance)
 - [Trie-tierakenne (Wikipedia)](https://en.wikipedia.org/wiki/Trie)
-- [Damerau: for Computer Detection and Correction of Spelling Errors](https://dl.acm.org/doi/pdf/10.1145/363958.363994)
+- [Damerau: A Technique for Computer Detection and Correction of Spelling Errors](https://dl.acm.org/doi/pdf/10.1145/363958.363994)
 - 
 
 
