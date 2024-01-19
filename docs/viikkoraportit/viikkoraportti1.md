@@ -6,7 +6,7 @@ Lisäksi tein itselleni alustavaa suunnitelmaa siitä, mitä aion koodata ensimm
 
 En vielä tällä viikolla ehtinyt aloittaa koodaamista, sillä aikaa kului algoritmien opiskeluun ja aiheen miettimiseen.
 
-Tällä viikolla opin erityisesti, mitä Damerau–Levenshteinin -etäisyys tarkoittaa. Katsoin aiheesti useita opetusvideoita, jotta ensi viikolla koodauksen aloittaminen olisi sujuvampaa. Lisäksi kertasin ohjelmistotuotannon ja ohjelmistotekniikan kurssilla neuvottuja konfigurointeja.
+Tällä viikolla opin erityisesti, mitä Damerau–Levenshteinin -etäisyys tarkoittaa. Katsoin aiheesti useita opetusvideoita, jotta ensi viikolla koodauksen aloittaminen olisi sujuvampaa. Lisäksi kertasin ohjelmistotuotannon ja ohjelmistotekniikan kurssilla neuvottuja konfigurointeja ja samalla opin näistä uutta.
 
 Tällä hetkellä tuottaa vaikeuksia hahmottaa, miten trie-tietorakenne toimii. Todennäköisesti tulen aluksi käyttämään jotakin valmista kirjastoa sen toteutukseen, jotta pääseen nopeasti koodamaan algoritmia. Tämän jälkeen teen tietorakenteelle oman toteutuksen. Näin saan lisää aikaa asian oppimiseen ja sisäistämiseen.
 
