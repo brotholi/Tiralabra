@@ -6,7 +6,7 @@ Toteutan harjoitustyössä kirjoitusvirheiden korjaajan, joka korjaa käyttäjä
 
 Sovellukselle voidaan antaa käyttöliittymällä tekstisyötteenä sanoja, jotka analysoidaan vertaamalla niiden etäisyyttä sanastossa oleviin sanoihin. Sovellus antaa korjausehdotuksen kertomalla ne sanat, joita kirjoitettu sana on lähimpänä. Ainakin ensimmäisessä toteutuksessa sovellukselle voi antaa kerrallaan vain yhden sanan, jonka se analysoi. Tätä voidaan laajentaa tarvittaessa niin, että sovellukselle voidaan antaa tekstikentässä pitempi, mutta kuitenkin rajattu, määrä tekstiä, jonka se analysoi ja antaa käyttäjällä suoraan korjattuna.
 
-*Tavoitteena olevat aika- ja tilavaativuudet (m.m. O-analyysit)*
+Lähteiden mukaan trie-tietorakenteeseen tehtävät hakuoperaatiot vievät pahimmillaan O(n), kun taas Damerau-Levenshteinin etäisyyttä käyttävä algoritmi vie pahimmillaan O(M*N), jossa M ja N ovat verrattavien merkkijonojen pituuksia. Nämä ovat alustavat aikavaativuustavoitteet.
 
 ## Ohjelmointikielet
 Harjoitustyö totetetaan Pythonilla.
@@ -22,7 +22,6 @@ Harjoitustyössä käytän seuraavia lähteitä:
 
 - [Damerau–Levenshtein distance (Wikipedia)](https://en.wikipedia.org/wiki/Damerau%E2%80%93Levenshtein_distance)
 - [Trie (Wikipedia)](https://en.wikipedia.org/wiki/Trie)
-- [Damerau: A Technique for Computer Detection and Correction of Spelling Errors](https://dl.acm.org/doi/pdf/10.1145/363958.363994)
 
 
 
