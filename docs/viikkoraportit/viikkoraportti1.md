@@ -17,6 +17,6 @@ Haastavaa on myös ehkä hahmottaa, miten ohjelma tulee käytännössä toimimaa
 | Päivä | Käytetty aika | Kuvaus |
 | ----- | ------------- | ------ |
 | 16.1.  | 5 h            | Gitprojektin luomista ja konfigurointia, aiheen pohtimista |
-| 18.9.  | 2 h            | algoritmeihin perehtymistä ja toteutuksen suunnittelua |
-| 19.9.  | 2 h            | Määrittelydokumentin viimeistelyä, lähteiden etsimistä |
+| 18.1.  | 2 h            | algoritmeihin perehtymistä ja toteutuksen suunnittelua |
+| 19.1.  | 2 h            | Määrittelydokumentin viimeistelyä, lähteiden etsimistä |
 | Yhteensä | 9 h         |        |
