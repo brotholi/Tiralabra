@@ -1,3 +1,6 @@
+![GHA workflow badge](https://github.com/brotholi/tiralabra/workflows/CI/badge.svg)
+[![codecov](https://codecov.io/gh/brotholi/tiralabra/graph/badge.svg?token=7cq8g1NoTP)](https://codecov.io/gh/brotholi/tiralabra)
+
 # Tiralabra - Kirjoitusvirheiden korjaaja
 
 Tämä on Algoritmit ja tekoäly -kurssilla tehtävä kirjoitusvirheitä korjaava sovellus.
