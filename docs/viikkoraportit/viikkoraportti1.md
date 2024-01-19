@@ -8,7 +8,7 @@ En vielä tällä viikolla ehtinyt aloittaa koodaamista, sillä aikaa kului algo
 
 Tällä viikolla opin erityisesti, mitä Damerau–Levenshteinin -etäisyys tarkoittaa. Katsoin aiheesti useita opetusvideoita, jotta ensi viikolla koodauksen aloittaminen onnistuisi ja lähteitä voisi paremmin ymmärtää. Lisäksi kertasin ohjelmistotuotannon ja ohjelmistotekniikan kurssilla neuvottuja konfigurointeja.
 
-Tällä hetkellä tuottaa vaikeuksia hahmottaa, miten trie-tietorakenne toimii. Todennäköisesti tulen aluksi käyttämään jotakin valmista kirjastoa sen toteutukseen, jotta pääseen nopeasti koodamaan algoritmia. Tämän jälkeen teen tietorakenteelle oman toteutuksen. Näin saan todennäköisesti hiukan aikalisää asian oppimiseen ja sisäistämiseen.
+Tällä hetkellä tuottaa vaikeuksia hahmottaa, miten trie-tietorakenne toimii. Todennäköisesti tulen aluksi käyttämään jotakin valmista kirjastoa sen toteutukseen, jotta pääseen nopeasti koodamaan algoritmia. Tämän jälkeen teen tietorakenteelle oman toteutuksen. Näin saan lisää aikaa asian oppimiseen ja sisäistämiseen.
 
 Haastavaa on myös ehkä hahmottaa, miten ohjelma tulee käytännössä toimimaan. Tämä varmasti selkeytyy kun opin lähdemateriaaleista lisää ja aloitan koodaamaan.
 
