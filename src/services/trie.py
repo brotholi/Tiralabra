@@ -2,17 +2,41 @@ ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzªµºÀÁÂÃÄ
 
 
 class Node:
+    """Luokka, joka kuvaa trie-verkon yksittäistä solmua
+
+    Atribuutit: 
+        letter: solmun kirjain, joka on tyhjä merkkijono juurisolmussa
+        children: solmun lapsisolmut
+        end_of_word: boolean-arvo, joka kertoo, onko solmu sanan lopussa
+    """
     def __init__(self, letter):
+        """Luokan konstruktori, joka luo uuden solmun
+
+        Args:
+            letter (str): solmun kirjain
+        """
         self.letter = letter
         self.children = [None]*len(ALPHABET)
         self.end_of_word = False
 
 
 class Trie:
+    """Luokka, joka kuvaa trie-tietorakennetta ja johon voidaan tallentaan sanasto
+
+    Atribuutit:
+        root: trie-tietorakenteen juurisolmu
+    """
     def __init__(self):
+        """Luokan konstruktori, joka luo uuden trie-tietorakenteen
+        """
         self.root = Node("")
 
     def add(self, word: str) -> None:
+        """Metodi, joka lisää sanan trie-tietorakenteeseen
+
+        Args:
+            word (str): lisättävä sana
+        """
         node = self.root
         for letter in word:
             try:
@@ -27,6 +51,14 @@ class Trie:
         return
 
     def search(self, word: str) -> bool:
+        """Metodi, joka etsii sanan trie-tietorakenteesta
+
+        Args:
+            word (str): etsittävä sana
+
+        Returns:
+            bool: palauttaa True, jos sana löytyy, muuten False
+        """
         node = self.root
         for letter in word:
             try:
