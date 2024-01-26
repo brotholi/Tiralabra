@@ -11,9 +11,11 @@ damerau_levenshtein = DamerauLevenshtein()
 vocabulary_service = VocabularyService("sanasto.csv")
 finnish_vocabulary = vocabulary_service.create_vocabulary()
 
+
 @app.route("/")
 def index():
     return render_template("index.html")
+
 
 @app.route("/check", methods=["POST"])
 def check():
@@ -22,4 +24,3 @@ def check():
         return render_template("result.html", output=input_text)
     else:
         return render_template("result.html", output="Sanaa ei löytynyt sanastosta")
-

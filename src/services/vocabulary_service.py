@@ -1,6 +1,7 @@
 import csv
 from services.trie import Trie
 
+
 class VocabularyService:
     def __init__(self, path):
         self.trie = Trie()
@@ -12,7 +13,7 @@ class VocabularyService:
         for word in self.words:
             self.trie.add(word)
         return self.trie
-    
+
     def read_file(self):
         with open(self.file_path, "r") as f:
             reader = csv.reader(f)

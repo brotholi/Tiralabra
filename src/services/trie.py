@@ -1,17 +1,18 @@
 ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzªµºÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑŃÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñńòóôõöøùúûüýþÿ0123456789šžωá,.!?;:'\"()[]-_*/+=%$&#|-> "
 
+
 class Node:
     def __init__(self, letter):
         self.letter = letter
         self.children = [None]*len(ALPHABET)
         self.end_of_word = False
 
+
 class Trie:
     def __init__(self):
         self.root = Node("")
 
     def add(self, word: str) -> None:
-        s = len(ALPHABET)
         node = self.root
         for letter in word:
             try:
@@ -35,6 +36,3 @@ class Trie:
                 return False
             node = node.children[index]
         return node.end_of_word
-
-
-    

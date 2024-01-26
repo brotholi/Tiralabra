@@ -1,6 +1,7 @@
 import unittest
 from services.trie import Trie
 
+
 class TestTrie(unittest.TestCase):
     def setUp(self):
         self.trie = Trie()
@@ -18,6 +19,3 @@ class TestTrie(unittest.TestCase):
         self.assertFalse(self.trie.search("kan"))
         self.assertFalse(self.trie.search("k"))
         self.assertFalse(self.trie.search(""))
-    
-
-    
