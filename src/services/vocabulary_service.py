@@ -19,10 +19,3 @@ class VocabularyService:
             for row in reader:
                 self.words.append(row[0])
         return
-
-    
-
-if __name__ == "__main__":
-    vocabulary_service = VocabularyService("sanasto.csv")
-    vocabulary_service.create_vocabulary()
-
