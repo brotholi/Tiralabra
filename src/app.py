@@ -14,11 +14,21 @@ finnish_vocabulary = vocabulary_service.create_vocabulary()
 
 @app.route("/")
 def index():
+    """Metodi, joka palauttaa index.html-sivun
+
+    Returns:
+        index.html-sivu
+    """
     return render_template("index.html")
 
 
 @app.route("/check", methods=["POST"])
 def check():
+    """Metodi, joka tarkistaa, löytyykö sana sanastosta
+
+    Returns:
+        result.html-sivu, jossa kerrotaan, löytyikö sana vai ei
+    """
     input_text = request.form.get("input")
     if finnish_vocabulary.search(input_text):
         return render_template("result.html", output=input_text)
