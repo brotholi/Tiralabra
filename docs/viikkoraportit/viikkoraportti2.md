@@ -13,6 +13,5 @@ Sovellus tallentaa nyt sanalistan trie-tietorakenteeseen ja kun käyttöliittym�
 | Päivä | Käytetty aika | Kuvaus |
 | ----- | ------------- | ------ |
 | 23.1.  | 2 h            | Käyttölittymän ja projektipohjan koodaamista |
-| 26.1.  | 6 h            | trien toteutusta: hakutoiminto ja sanaston tallennus, testejä |
-| 27.1.  | 1 h            | Dokumentaatiota |
+| 26.1.  | 7 h            | trien toteutusta: hakutoiminto ja sanaston tallennus, testejä |
 | Yhteensä | 9 h         |        |
