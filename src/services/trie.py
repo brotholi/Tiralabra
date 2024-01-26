@@ -17,11 +17,12 @@ class Trie:
         for letter in word:
             try:
                 index = ALPHABET.index(letter)
+                if not node.children[index]:
+                    node.children[index] = Node(letter)
+                node = node.children[index]
             except ValueError:
                 continue
-            if not node.children[index]:
-                node.children[index] = Node(letter)
-            node = node.children[index]
+    
         node.end_of_word = True
         return
 
@@ -30,9 +31,9 @@ class Trie:
         for letter in word:
             try:
                 index = ALPHABET.index(letter)
+                if not node.children[index]:
+                    return False
+                node = node.children[index]
             except ValueError:
-                continue
-            if not node.children[index]:
                 return False
-            node = node.children[index]
         return node.end_of_word

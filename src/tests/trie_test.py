@@ -19,3 +19,9 @@ class TestTrie(unittest.TestCase):
         self.assertFalse(self.trie.search("kan"))
         self.assertFalse(self.trie.search("k"))
         self.assertFalse(self.trie.search(""))
+
+    def test_add_unknown_character(self):
+        self.trie.add("チ")
+        self.assertFalse(self.trie.search("チ"))
+
+        
