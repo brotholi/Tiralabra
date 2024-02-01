@@ -16,7 +16,7 @@ class Node:
             letter (str): solmun kirjain
         """
         self.letter = letter
-        self.children = [None]*len(ALPHABET)
+        self.children = {}
         self.end_of_word = False
 
 
@@ -39,16 +39,15 @@ class Trie:
         """
         node = self.root
         for letter in word:
-            try:
-                index = ALPHABET.index(letter)
-                if not node.children[index]:
-                    node.children[index] = Node(letter)
-                node = node.children[index]
-            except ValueError:
-                continue
-    
+            if letter in node.children:
+                node = node.children[letter]
+            else:
+                next_node = Node(letter)
+                node.children[letter] = next_node
+                node = next_node
+
         node.end_of_word = True
-        return
+        
 
     def search(self, word: str) -> bool:
         """Metodi, joka etsii sanan trie-tietorakenteesta
@@ -57,15 +56,41 @@ class Trie:
             word (str): etsittävä sana
 
         Returns:
-            bool: palauttaa True, jos sana löytyy, muuten False
+            list: lista sanoista, jotka löytyivät
         """
         node = self.root
         for letter in word:
-            try:
-                index = ALPHABET.index(letter)
-                if not node.children[index]:
-                    return False
-                node = node.children[index]
-            except ValueError:
-                return False
-        return node.end_of_word
+            if letter in node.children:
+                node = node.children[letter]
+            else:
+                return []
+            
+        self.content = []
+        self._dfs(node, word[:-1])
+        return self.content
+
+    
+    def _dfs(self, node, prev):
+        """Metodi, joka suorittaa syvyyshaun trie-tietorakenteessa
+
+        Args:
+            node (Node): solmu, josta haun aloitetaan
+            prev (str): edellinen kirjain
+        """
+        if node.end_of_word:
+            self.content.append(prev + node.letter)
+
+        for child in node.children.values():
+            self._dfs(child, prev + node.letter)
+
+
+    def get_trie_content(self) -> list:
+        """Metodi, joka palauttaa koko trie-tietorakenteen sisällön
+
+        Returns:
+            list: trie-tietorakenteen sisältö
+        """
+        self.content = []
+        self._dfs(self.root, "")
+        return self.content
+
