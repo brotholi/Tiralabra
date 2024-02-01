@@ -5,5 +5,14 @@
 <a href="/">Etusivulle</a><br>
 <br>
 <h3>Korjattu sana</h3>
-{{ output }} <br>
+{% if not result %} <br>
+Ei korjauksia <br>
+{% else %}
+<h4> Tarkoititko? </h4>
+{% for word in result %}
+{{ word }}  
+{% endfor %}
+{% endif %}
+<br>
+<br>
 {% endblock %}

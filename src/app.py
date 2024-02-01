@@ -30,7 +30,7 @@ def check():
         result.html-sivu, jossa kerrotaan, löytyikö sana vai ei
     """
     input_text = request.form.get("input")
-    if finnish_vocabulary.search(input_text):
-        return render_template("result.html", output=input_text)
-    else:
-        return render_template("result.html", output="Sanaa ei löytynyt sanastosta")
+    similar_words = finnish_vocabulary.search(input_text)
+    if len(similar_words) == 0:
+        return render_template("result.html")
+    return render_template("result.html", result=similar_words)

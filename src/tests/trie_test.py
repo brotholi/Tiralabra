@@ -14,11 +14,11 @@ class TestTrie(unittest.TestCase):
     def test_search(self):
         self.assertEqual(self.trie.search("kissa"), ["kissa"])
         self.assertEqual(self.trie.search("ka"), ["kana", "kaali", "karpalo"])
-        self.assertEqual(self.trie.search("k"), ["kissa", "koira", "kana", "kaali", "karpalo"])
+        self.assertEqual(self.trie.search("k"), [
+                         "kissa", "koira", "kana", "kaali", "karpalo"])
         self.assertEqual(self.trie.search("omena"), [])
 
     def test_get_trie_content(self):
         result = self.trie.get_trie_content()
-        self.assertEqual(result, ["kissa", "koira", "kana", "kaali", "karpalo"])
-
-        
+        self.assertEqual(
+            result, ["kissa", "koira", "kana", "kaali", "karpalo"])

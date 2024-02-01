@@ -9,6 +9,7 @@ class VocabularyService:
         trie: trie-tietorakenne
         file_path: sanaston tiedostopolku
     """
+
     def __init__(self, path):
         """_summary_
 

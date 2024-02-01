@@ -13,4 +13,3 @@ class TestVocabularyService(unittest.TestCase):
         vocabulary_service = VocabularyService("sanasto.csv")
         words = vocabulary_service.read_file()
         self.assertEqual(len(words), 40203)
-        

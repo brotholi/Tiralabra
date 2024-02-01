@@ -1,6 +1,3 @@
-ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzªµºÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑŃÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñńòóôõöøùúûüýþÿ0123456789šžωá,.!?;:'\"()[]-_*/+=%$&#|-> "
-
-
 class Node:
     """Luokka, joka kuvaa trie-verkon yksittäistä solmua
 
@@ -9,6 +6,7 @@ class Node:
         children: solmun lapsisolmut
         end_of_word: boolean-arvo, joka kertoo, onko solmu sanan lopussa
     """
+
     def __init__(self, letter):
         """Luokan konstruktori, joka luo uuden solmun
 
@@ -26,10 +24,12 @@ class Trie:
     Atribuutit:
         root: trie-tietorakenteen juurisolmu
     """
+
     def __init__(self):
         """Luokan konstruktori, joka luo uuden trie-tietorakenteen
         """
         self.root = Node("")
+        self.content = []
 
     def add(self, word: str) -> None:
         """Metodi, joka lisää sanan trie-tietorakenteeseen
@@ -47,7 +47,6 @@ class Trie:
                 node = next_node
 
         node.end_of_word = True
-        
 
     def search(self, word: str) -> bool:
         """Metodi, joka etsii sanan trie-tietorakenteesta
@@ -64,12 +63,11 @@ class Trie:
                 node = node.children[letter]
             else:
                 return []
-            
+
         self.content = []
         self._dfs(node, word[:-1])
         return self.content
 
-    
     def _dfs(self, node, prev):
         """Metodi, joka suorittaa syvyyshaun trie-tietorakenteessa
 
@@ -83,8 +81,7 @@ class Trie:
         for child in node.children.values():
             self._dfs(child, prev + node.letter)
 
-
-    def get_trie_content(self) -> list:
+    def get_trie_content(self):
         """Metodi, joka palauttaa koko trie-tietorakenteen sisällön
 
         Returns:
@@ -93,4 +90,3 @@ class Trie:
         self.content = []
         self._dfs(self.root, "")
         return self.content
-
