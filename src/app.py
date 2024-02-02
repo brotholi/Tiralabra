@@ -9,7 +9,6 @@ from services.vocabulary_service import VocabularyService
 app = Flask(__name__)
 damerau_levenshtein = DamerauLevenshtein()
 vocabulary_service = VocabularyService("sanasto.csv")
-finnish_vocabulary = vocabulary_service.create_vocabulary()
 
 
 @app.route("/")
@@ -24,13 +23,29 @@ def index():
 
 @app.route("/check", methods=["POST"])
 def check():
-    """Metodi, joka tarkistaa, löytyykö sana sanastosta
+    """Metodi, joka ottaa vastaan käyttäjän syöttämän sanan ja tarkistaa sen oikeinkirjoituksen service-luokkien avulla
 
     Returns:
-        result.html-sivu, jossa kerrotaan, löytyikö sana vai ei
+        result.html-sivu, jossa annetaan käyttäjälle palautetta syötetystä sanasta
     """
     input_text = request.form.get("input")
-    similar_words = finnish_vocabulary.search(input_text)
+    if vocabulary_service.find_word_in_vocabulary(input_text):
+        return render_template("result.html", input=input_text, message="(Ei kirjoitusvirheitä)")
+
+    similar_words = vocabulary_service.find_similar_words(input_text)
     if len(similar_words) == 0:
-        return render_template("result.html")
-    return render_template("result.html", result=similar_words)
+        return render_template("result.html", input=input_text, message="Sanaa ei löytynyt sanastosta")
+    return render_template("result.html", result=similar_words, input=input_text)
+
+@app.route("/<input>/add", methods=["POST"])
+def add(input: str):
+    """Metodi, joka ottaa vastaan käyttäjän syöttämän sanan ja lisää sen sanastoon
+
+    Returns:
+        index.html-sivu
+    """
+    input_text = input
+    if input_text and vocabulary_service.add_word_to_vocabulary(input_text):
+            return render_template("message.html", message="Sana lisätty sanastoon!")
+    
+    return render_template("message.html", message="Valitettavasti sanaa ei voitu lisätä sanastoon")

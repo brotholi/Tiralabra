@@ -11,21 +11,28 @@ class TestTrie(unittest.TestCase):
         self.trie.add("kaali")
         self.trie.add("karpalo")
 
+    def test_add(self):
+        self.assertTrue(self.trie.search("kissa"))
+        self.assertTrue(self.trie.search("koira"))
+        self.assertTrue(self.trie.search("kana"))
+        self.assertTrue(self.trie.search("kaali"))
+        self.assertTrue(self.trie.search("karpalo"))
+
+    def test_add_with_none(self):
+        self.trie.add(None)
+        self.assertFalse(self.trie.search(None))
+
     def test_search(self):
-        self.assertEqual(self.trie.search("kissa"), ["kissa"])
-        self.assertEqual(self.trie.search("ka"), ["kana", "kaali", "karpalo"])
-        self.assertEqual(self.trie.search("k"), [
-                         "kissa", "koira", "kana", "kaali", "karpalo"])
-        self.assertEqual(self.trie.search("omena"), [])
+        self.assertTrue(self.trie.search("kissa"))
 
     def test_get_trie_content(self):
         result = self.trie.get_trie_content()
         self.assertEqual(
             result, ["kissa", "koira", "kana", "kaali", "karpalo"])
-        
+
     def test_search_with_empty_string(self):
         self.assertEqual(self.trie.search(""), [])
-    
+
     def test_search_with_none(self):
         self.assertEqual(self.trie.search(None), [])
 
@@ -41,7 +48,6 @@ class TestTrie(unittest.TestCase):
 
     def test_search_with_empty_trie(self):
         trie = Trie()
-        self.assertEqual(trie.search("kissa"), [])
-        self.assertEqual(trie.search("ka"), [])
-        self.assertEqual(trie.search("k"), [])
-        self.assertEqual(trie.search("omena"), [])
+        self.assertFalse(trie.search("kissa"))
+        self.assertFalse(trie.search("koira"))
+        self.assertFalse(trie.search(" "))

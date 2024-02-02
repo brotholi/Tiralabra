@@ -38,7 +38,7 @@ class Trie:
             word (str): lisättävä sana
         """
         if not word:
-            return
+            return False
 
         node = self.root
         for letter in word:
@@ -49,7 +49,11 @@ class Trie:
                 node.children[letter] = next_node
                 node = next_node
 
+        if node.end_of_word:
+            return False
+
         node.end_of_word = True
+        return True
 
     def search(self, word: str) -> bool:
         """Metodi, joka etsii sanan trie-tietorakenteesta
@@ -64,15 +68,13 @@ class Trie:
             return []
 
         node = self.root
-        for letter in word:
-            if letter in node.children:
-                node = node.children[letter]
-            else:
-                return []
 
-        self.content = []
-        self._dfs(node, word[:-1])
-        return self.content
+        for letter in word:
+            if letter not in node.children:
+                return False
+            node = node.children[letter]
+
+        return node.end_of_word
 
     def _dfs(self, node: Node, prev: str) -> None:
         """Metodi, joka suorittaa syvyyshaun trie-tietorakenteessa

@@ -6,7 +6,6 @@ class DamerauLevenshtein:
         """"Luokan konstruktori, joka luo uuden DamerauLevenshtein-olion
         """
 
-    @classmethod
     def distance(self, word1: str, word2: str) -> int:
         """Metodi, joka tutkii etäisyyttä kahden merkkijonon välillä
 
@@ -16,14 +15,14 @@ class DamerauLevenshtein:
         Returns:
             int: etäisyys
         """
-        
+
         if not word1 and not word2:
             return 0
         if not word1:
             return len(word2)
         if not word2:
             return len(word1)
-        
+
         inf = float("inf")
         distances = [[inf] * (len(word2) + 1) for _ in range(len(word1) + 1)]
 

@@ -1,6 +1,6 @@
 ## Viikko 3
 
-Tällä viikolla koodasin sovellukseen trie-tietorakenteelle uuden metodin, joka palauttaa kaikki sen sisältämät sanat listana. Muokkasin myös search-metodia niin, että se palauttaa etsityt sanat ja hyödyntää samaa syvyyshakua kuin trien koko sisällön palauttava metodi. Lisäksi toteutin ensimmäisen version Damerau-Levensteinin etäisyyttä hyödyntävästä algoritmista. Aloin kirjoittaa testausraporttia ja lisäsin luokkiin yksikkötestejä erilaisille rajatapauksille.
+Tällä viikolla koodasin sovellukseen trie-tietorakenteelle uuden metodin, joka palauttaa kaikki sen sisältämät sanat listana. Muokkasin myös search-metodia niin, että se palauttaa etsityt sanat ja hyödyntää samaa syvyyshakua kuin trien koko sisällön palauttava metodi. Lisäksi toteutin ensimmäisen version Damerau-Levensteinin etäisyyttä hyödyntävästä algoritmista. Aloin kirjoittaa testausraporttia ja lisäsin luokkiin yksikkötestejä erilaisille rajatapauksille, joissa metodeja kutsutaan vääräntyyppisillä parametreilla.
 
 Opin tarkemmin merkkijonojen "etäisyyttä" tutkivan algoritmin toiminnasta, kun luin pseudokoodia ja toteutin oman versioni siitä. Tällä viikolla kertasin jotakin tira-kurssien verkkoja ja syvyyshakua käsittelevää materiaalia, jota tarvitsin toteutukseen. 
 

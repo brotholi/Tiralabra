@@ -6,9 +6,10 @@ Typotarkistin
 
 {% block content %}
 <h2> Kirjoitusvirheiden korjaaja </h2>
-<h3>Anna sana (enintään 10 merkkiä)</h3>
+<br>
+<h3>Syötä sana (enintään 20 merkkiä):</h3>
 <form action="/check" method="POST" onsubmit="return check(this)">
-    <textarea id="textbox" name="input" rows="5" cols="20" maxlength="10"></textarea><br><br>
+    <textarea id="textbox" name="input" rows="7" cols="30" maxlength="10"></textarea><br><br>
     <input type="submit" class="button" value="Tarkista">
 </form>
 <script>
@@ -20,4 +21,5 @@ Typotarkistin
         return true;
     }
 </script>
+<br><br><br>
 {% endblock %}
