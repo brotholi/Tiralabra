@@ -6,13 +6,8 @@ Yksikkötesteissä on käytetty unnittest-kirjastoa ja ne on suunniteltu suorite
 
 **Testikattavuusraportti**
 
-Name                                  Stmts   Miss Branch BrPart  Cover   Missing
----------------------------------------------------------------------------------
-src/services/damerau_levenshtein.py      18      0     14      0   100%
-src/services/trie.py                     36      0     12      0   100%
-src/services/vocabulary_service.py       18      0      6      0   100%
----------------------------------------------------------------------------------
-TOTAL                                    72      0     32      0   100%
+![image](https://github.com/brotholi/tiralabra/assets/91954165/400f6665-97d0-45ef-9097-10d5cee1a175)
+
 
 
 ## Suorituskyvyn testaus
