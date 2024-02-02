@@ -22,3 +22,26 @@ class TestTrie(unittest.TestCase):
         result = self.trie.get_trie_content()
         self.assertEqual(
             result, ["kissa", "koira", "kana", "kaali", "karpalo"])
+        
+    def test_search_with_empty_string(self):
+        self.assertEqual(self.trie.search(""), [])
+    
+    def test_search_with_none(self):
+        self.assertEqual(self.trie.search(None), [])
+
+    def test_get_trie_content_with_empty_trie(self):
+        trie = Trie()
+        result = trie.get_trie_content()
+        self.assertEqual(result, [])
+
+    def test_get_trie_content_with_none(self):
+        trie = Trie()
+        result = trie.get_trie_content()
+        self.assertEqual(result, [])
+
+    def test_search_with_empty_trie(self):
+        trie = Trie()
+        self.assertEqual(trie.search("kissa"), [])
+        self.assertEqual(trie.search("ka"), [])
+        self.assertEqual(trie.search("k"), [])
+        self.assertEqual(trie.search("omena"), [])
