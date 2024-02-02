@@ -1,6 +1,6 @@
-## Testausraportti
+# Testausraportti
 
-### Yksikkötestit
+## Yksikkötestit
 
 Yksikkötesteissä on käytetty unnittest-kirjastoa ja ne on suunniteltu suoritettavaksi src/services hakemiston koodille, joka sisältää tällä hetkellä luokat vocabolary_service, trie, damerau_levenshtein. Nämä luokat on valittu testaukseen, koska ne sisältävät varsinaisen ohjelmalogiikan, kun taas käyttölittymään liittyvä koodi on jätetty yksikkötestauksen ulkopuolelle.
 
