@@ -10,7 +10,7 @@ Tällä viikolla opin tarkemmin merkkijonojen "etäisyyttä" tutkivan algoritmin
 
 Suurempia ongelmia toteutuksessa ei ole ollut, vaikka välillä algoritmien toimintalogiikan hahmottaminen vie aikaa. 
 
-Ensi viikolla on tarkoitus tehdä enemmän käyttöliittymätestausta ja suorituskyvyn testausta algorimeille. Ainakin Damerau-Lehvenshtein algoritmi vaatii todennäköisesti nopeuttamista, sillä toteutin ensimmäisen version yksinkertaisella tavalla niin, että ymmärtäisin miten se toimii. Ajatuksena olisi myös miettiä tarkemmin, miten ohjelma käsittelee pitempiä käyttäjän antamia syötteitä ja miten sanan lisääminen toimii käytännössä.
+Ensi viikolla on tarkoitus tehdä suorituskyvyn testausta algoritmeille. Ainakin Damerau-Lehvenshtein algoritmi vaatii todennäköisesti nopeuttamista, sillä toteutin ensimmäisen version yksinkertaisella tavalla niin, että ymmärtäisin miten se toimii. Ajatuksena olisi myös miettiä tarkemmin, miten ohjelma käsittelee pitempiä käyttäjän antamia syötteitä ja miten sanan lisääminen toimii käytännössä.
 
 ## Tuntikirjanpito
 
