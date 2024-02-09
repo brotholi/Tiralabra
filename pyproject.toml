@@ -16,6 +16,7 @@ coverage = "^7.4.0"
 pytest = "^7.4.4"
 pylint = "^3.0.3"
 autopep8 = "^2.0.4"
+hypothesis = "^6.98.3"
 
 [build-system]
 requires = ["poetry-core"]
