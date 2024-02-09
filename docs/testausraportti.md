@@ -47,3 +47,7 @@ Searching 10000 character words took 0.046685143002832774 seconds
 Searching 100000 character words took 0.6359621279989369 seconds
 
 Searching 1000000 character words took 4.71832493400143 seconds
+
+## Damerau-Levenshtein
+
+[tbd]
