@@ -9,7 +9,7 @@ Tällä viikolla olen myös kirjoittanut toteus- ja testausdokumenttia sekä laa
 
 Uutena asiana olen oppinut tällä viikolla invarianttitestauksesta, sillä aihe oli itselleni jokseenkin tuntematon. Myös suorituskykytestauksesta olen oppinut uutta. Suorituskykytestauksen miettiminen on ollut ehkä haasteellisinta tällä viikolla.
 
-Ensi viikolla ajattelin keskittyä vertaisarvioinnin lisäksi itse toteutukseen ja laajentamaan sovelluksen käsittelemään pitempiä syötteitä.
+Ensi viikolla ajattelin keskittyä vertaisarvioinnin lisäksi itse toteutukseen ja laajentamaan sovelluksen käsittelemään pitempiä syötteitä. Myös suorituskykytestaus jatkuu ensi viikolla.
 
 ## Tuntikirjanpito
 
