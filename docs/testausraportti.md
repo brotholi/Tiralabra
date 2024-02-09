@@ -11,4 +11,28 @@ Yksikkötesteissä on käytetty unnittest-kirjastoa ja ne on suunniteltu suorite
 
 ## Suorituskyvyn testaus
 
-Ohjelmaa tullaan testaamaan suorituskyvyn osalta ajamalla manuaalisesti testejä
+Sovelluksen suorituskykyä on testattu ajamalla manuaalisesti testejä, joissa annetaan suuria syötteitä algoritmeille ja tutkimalla aikavaativuuksia.
+
+### Trie
+Trie-luokalle on tehty seuraavanlaisia testejä:
+Haku-, lisäys ja trien koko sisällön palauttaville metodeille on tehty testejä, joissa tutkitaan, toimivatko ne, jos lisättävien merkkijonojen pituudet ovat todella pitkiä, yli 1000 mittaisia. Aikavaativuutta on testattu testeillä, joissa kasvatetaan syötteen kokoa kymmenkertaiseksi joka testauskerralla ja katsotaan suhteellinen ajan kasvu. 
+
+Esimerkkitulosteita aikavaativuustesteistä:
+
+#### add-metodi
+Adding 1000 character words took 0.00490963899937924 seconds
+Adding 10000 character words took 0.04868726700078696 seconds
+Adding 100000 character words took 0.5059331439988455 seconds
+Adding 1000000 character words took 5.09806443799971 seconds
+
+#### get_trie_content-metodi
+Getting content of 10 word trie took 8.861999958753586e-06 seconds
+Getting content of 100 word trie took 9.015999239636585e-06 seconds
+Getting content of 1000 word trie took 9.507999493507668e-06 seconds
+Getting content of 10000 word trie took 9.349998435936868e-06 seconds
+
+#### searc-metori
+Searching 1000 character words took 0.004396901997097302 seconds
+Searching 10000 character words took 0.046685143002832774 seconds
+Searching 100000 character words took 0.6359621279989369 seconds
+Searching 1000000 character words took 4.71832493400143 seconds
