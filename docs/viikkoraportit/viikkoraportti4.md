@@ -14,7 +14,7 @@ Ensi viikolla ajattelin keskittyä vertaisarvioinnin lisäksi laajentamaan sovel
 
 | Päivä | Käytetty aika | Kuvaus |
 | ----- | ------------- | ------ |
-| 6.2.  | 2 h            | Dokumentaatiota yms. |
-| 8.2.  | 8 h 			| Suorituskykyestausta ja yksikkötestien kirjoittamista |
+| 8.2.  | 2 h            | Dokumentaatiota yms. |
+| 9.2.  | 8 h 			| Suorituskykyestausta ja yksikkötestien kirjoittamista |
 
  Yhteensä  10 h    
