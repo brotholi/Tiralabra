@@ -7,15 +7,19 @@ class VocabularyService:
     """Luokka, joka luo tallentaa sanaston trie-tietorakenteeseen
 
     Atribuutit:
-        trie: trie-tietorakenne
-        file_path: sanaston tiedostopolku
+        damerau_levenshtein (DamerauLevenshtein): luokka, joka tutkii etäisyyttä kahden merkkijonon välillä
+        trie (Trie): trie-tietorakenne, johon sanasto tallennetaan
+        file_path (str): tiedostopolku, jossa sanasto sijaitsee
     """
 
     def __init__(self, path, trie=Trie(), damerau_levenshtein=DamerauLevenshtein()):
         """_summary_
 
         Args:
-            path (str): Tiedostopolku sanastoon, joka halutaan tallentaa trie-tietorakenteeseen
+            path (str): tiedostopolku, jossa sanasto sijaitsee
+            trie (Trie, optional): trie-tietorakenne, johon sanasto tallennetaan. Defaults to Trie().
+            damerau_levenshtein (DamerauLevenshtein, optional): luokka, joka tutkii etäisyyttä kahden merkkijonon välillä. Defaults to DamerauLevenshtein().    
+
         """
         self.damerau_levenshtein = damerau_levenshtein
         self.trie = trie
@@ -24,9 +28,6 @@ class VocabularyService:
 
     def create_vocabulary(self):
         """Metodi, joka tallentaa tiedostossa olevan sanaston trie-tietorakenteeseen
-
-        Returns:
-            Trie-tietorakenteen, jossa on sanasto
         """
         vocabulary_words = self._read_file()
         for word in vocabulary_words:
@@ -75,7 +76,7 @@ class VocabularyService:
             if distance <= 1:
                 similar_words.append(vocabulary_word)
         return similar_words
-    
+
     def add_word_to_vocabulary(self, word):
         """Metodi, joka lisää sanan sanastoon
 
@@ -93,5 +94,3 @@ class VocabularyService:
                 writer.writerow([word])
             return True
         return False
-                
-
