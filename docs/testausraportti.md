@@ -33,7 +33,7 @@ Esimerkkitulosteita aikavaativuustesteistä:
 - Getting content of 1000000 word trie took 1.0677998943720013e-05 seconds
 
 
-#### search-metori
+#### search-metodi
 - Searching 1000 character words took 0.004396901997097302 seconds
 - Searching 10000 character words took 0.046685143002832774 seconds
 - Searching 100000 character words took 0.6359621279989369 seconds
