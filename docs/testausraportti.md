@@ -13,7 +13,7 @@ Yksikkötesteissä on käytetty unnittest-kirjastoa ja ne on suunniteltu suorite
 
 Sovelluksen suorituskykyä on testattu ajamalla manuaalisesti testejä, joissa annetaan suuria syötteitä algoritmeille ja tutkimalla aikavaativuuksia.
 
-### Trie
+## Trie
 Trie-luokalle on tehty seuraavanlaisia testejä:
 Haku-, lisäys ja trien koko sisällön palauttaville metodeille on tehty testejä, joissa tutkitaan, toimivatko ne, jos lisättävien merkkijonojen pituudet ovat todella pitkiä, yli 1000 mittaisia. Aikavaativuutta on testattu testeillä, joissa kasvatetaan syötteen kokoa kymmenkertaiseksi joka testauskerralla ja katsotaan suhteellinen ajan kasvu. 
 
