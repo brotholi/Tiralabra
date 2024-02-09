@@ -41,7 +41,3 @@ class TestVocabularyService(unittest.TestCase):
         self.assertFalse(
             self.vocabulary_service.add_word_to_vocabulary("kissa"))
         
-
-if __name__ == "__main__":
-    unittest.main()
-    
