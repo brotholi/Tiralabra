@@ -3,11 +3,9 @@ from flask import (
     render_template,
     request,
 )
-from services.damerau_levenshtein import DamerauLevenshtein
 from services.vocabulary_service import VocabularyService
 
 app = Flask(__name__)
-damerau_levenshtein = DamerauLevenshtein()
 vocabulary_service = VocabularyService("sanasto.csv")
 
 

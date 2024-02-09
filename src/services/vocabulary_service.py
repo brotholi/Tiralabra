@@ -11,13 +11,14 @@ class VocabularyService:
         file_path: sanaston tiedostopolku
     """
 
-    def __init__(self, path):
+    def __init__(self, path, trie=Trie(), damerau_levenshtein=DamerauLevenshtein()):
         """_summary_
 
         Args:
             path (str): Tiedostopolku sanastoon, joka halutaan tallentaa trie-tietorakenteeseen
         """
-        self.__damerau_levenshtein = DamerauLevenshtein()
+        self.damerau_levenshtein = damerau_levenshtein
+        self.trie = trie
         self.file_path = path
         self.__trie = self.create_vocabulary()
 
@@ -27,11 +28,10 @@ class VocabularyService:
         Returns:
             Trie-tietorakenteen, jossa on sanasto
         """
-        trie = Trie()
         vocabulary_words = self._read_file()
         for word in vocabulary_words:
-            trie.add(word)
-        return trie
+            self.trie.add(word)
+        return
 
     def find_word_in_vocabulary(self, word):
         """Metodi, joka etsii sanan sanastosta
@@ -42,7 +42,7 @@ class VocabularyService:
         Returns:
             bool: True, jos sana löytyy, muuten False
         """
-        return self.__trie.search(word)
+        return self.trie.search(word)
 
     def _read_file(self):
         """Metodi, joka lukee tiedostossa olevat sanat ja tallentaa ne listaan
@@ -68,10 +68,10 @@ class VocabularyService:
         if not word:
             return []
 
-        vocabulary = self.__trie.get_trie_content()
+        vocabulary = self.trie.get_trie_content()
         similar_words = []
         for vocabulary_word in vocabulary:
-            distance = self.__damerau_levenshtein.distance(word, vocabulary_word)
+            distance = self.damerau_levenshtein.distance(word, vocabulary_word)
             if distance <= 1:
                 similar_words.append(vocabulary_word)
         return similar_words
@@ -87,7 +87,7 @@ class VocabularyService:
         """
         if not word:
             return False
-        if self.__trie.add(word):
+        if self.trie.add(word):
             with open(self.file_path, mode='a', newline='') as file:
                 writer = csv.writer(file)
                 writer.writerow([word])
