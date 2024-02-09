@@ -6,3 +6,5 @@ htmlcov
 *.png
 .vscode
 .hypothesis
+src/__init__.py
+src/trie_performance_test.py
