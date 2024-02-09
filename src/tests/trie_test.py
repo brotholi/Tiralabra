@@ -1,4 +1,6 @@
 import unittest
+from hypothesis import given, settings
+import hypothesis.strategies as st
 from services.trie import Trie
 
 
@@ -51,3 +53,8 @@ class TestTrie(unittest.TestCase):
         self.assertFalse(trie.search("kissa"))
         self.assertFalse(trie.search("koira"))
         self.assertFalse(trie.search(" "))
+
+    @given(arvo=st.text(min_size=1, max_size=50))
+    @settings(max_examples=1000)
+    def test_search_with_hypothesis(self, arvo):
+        self.assertFalse(self.trie.search(arvo))
