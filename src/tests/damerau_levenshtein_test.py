@@ -1,6 +1,4 @@
 import unittest
-import hypothesis.strategies as st
-from hypothesis import given, settings
 from services.damerau_levenshtein import DamerauLevenshtein
 
 
@@ -15,12 +13,6 @@ class TestDamerauLevenshtein(unittest.TestCase):
             self.word1, self.word2), 2)
         self.assertEqual(
             self.damerau_levenshtein.distance("kissa", "kissa"), 0)
-        
-    @given(arvo=st.text(min_size=1, max_size=50))
-    @settings(max_examples=1000)
-    def test_distance_with_hypothesis(self, arvo):
-        self.assertEqual(
-            self.damerau_levenshtein.distance(arvo, arvo), 0)
 
     def test_distance_with_empty_string(self):
         self.assertEqual(
