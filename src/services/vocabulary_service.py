@@ -20,7 +20,7 @@ class VocabularyService:
         self.damerau_levenshtein = damerau_levenshtein
         self.trie = trie
         self.file_path = path
-        self.__trie = self.create_vocabulary()
+        self.create_vocabulary()
 
     def create_vocabulary(self):
         """Metodi, joka tallentaa tiedostossa olevan sanaston trie-tietorakenteeseen
