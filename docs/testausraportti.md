@@ -39,7 +39,7 @@ Getting content of 1000 word trie took 9.507999493507668e-06 seconds
 Getting content of 10000 word trie took 9.349998435936868e-06 seconds
 
 
-#### searc-metori
+#### search-metori
 Searching 1000 character words took 0.004396901997097302 seconds
 
 Searching 10000 character words took 0.046685143002832774 seconds
