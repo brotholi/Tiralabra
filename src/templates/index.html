@@ -6,16 +6,26 @@ Typotarkistin
 
 {% block content %}
 <h2> Kirjoitusvirheiden korjaaja </h2>
-<br>
-<h3>Syötä sana (enintään 20 merkkiä):</h3>
+<p>Voit joko pyytää tekstin korjaamista tai etsiä yksittäisen sanan oikeinkirjoituksen.</p>
+<h3>Tarkista sanan oikeinkirjoitus (enintään 20 merkkiä):</h3>
 <form action="/check" method="POST" onsubmit="return check(this)">
-    <textarea id="textbox" name="input" rows="7" cols="30" maxlength="10"></textarea><br><br>
+    <textarea id="textbox" name="input" rows="3" cols="30" maxlength="10"></textarea><br><br>
     <input type="submit" class="button" value="Tarkista">
+</form>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h3>Syötä korjattava teksti (enintään 100 merkkiä)</h3>
+<form action="/correct" method="POST" onsubmit="return check(this)">
+    <textarea id="textbox" name="input" rows="15" cols="40" maxlength="100"></textarea><br><br>
+    <input type="submit" class="button" value="Korjaa">
 </form>
 <script>
     function check(form) {
         if (form.input.value.length < 3) {
-            alert("Sanan tulee olla vähintään 3 merkkiä pitkä");
+            alert("Syötteen tulee olla vähintään 3 merkkiä pitkä");
             return false;
         }
         return true;

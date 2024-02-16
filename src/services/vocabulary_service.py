@@ -94,3 +94,65 @@ class VocabularyService:
                 writer.writerow([word])
             return True
         return False
+
+    def parse_text(self, text):
+        """Metodi, joka jakaa tekstin sanoiksi
+
+        Args:
+            text (str): jaettava teksti
+
+        Returns:
+            list: lista sanoista
+        """
+        if not text:
+            return []
+        
+        return text.split()
+    
+    def combine_text(self, words):
+        """Metodi, joka yhdistää sanat tekstiksi
+
+        Args:
+            words (list): lista sanoista
+
+        Returns:
+            str: yhdistetty teksti
+        """
+        if not words:
+            return ""
+    
+        return " ".join(words)
+    
+    def fix_typos(self, words):
+        """Metodi, joka korjaa tekstissä olevat kirjoitusvirheet
+        Args:
+            words (list): lista sanoista
+        Returns:
+            list: korjatut sanat
+        """
+        if not words:
+            return []
+
+        corrected_words = []
+
+        for word in words:
+        # Make sure punctuation marks are preserved
+            punctuation_mark = ""
+            if word[-1] in [".", ",", "!", "?"]:
+                punctuation_mark = word[-1]
+                word = word[:-1]
+
+            if not self.find_word_in_vocabulary(word):
+                similar_words = self.find_similar_words(word)
+        # No similar words were found, assume word is correct
+                if len(similar_words) == 0:
+                    corrected_words.append(word + punctuation_mark)
+                else:
+                    corrected_words.append(similar_words[0] + punctuation_mark)
+
+        # Word was found in vocabulary, so it is correct            
+            else:
+                corrected_words.append(word + punctuation_mark)
+
+        return corrected_words
+    

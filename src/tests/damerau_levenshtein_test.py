@@ -14,7 +14,7 @@ class TestDamerauLevenshtein(unittest.TestCase):
         self.assertEqual(self.damerau_levenshtein.distance(
             self.word1, self.word2), 2)
         self.assertEqual(
-            self.damerau_levenshtein.distance("kissa", "kissa"), 0)
+            self.damerau_levenshtein.distance(self.word1, self.word1), 0)
 
     @given(arvo=st.text(min_size=1, max_size=50))
     @settings(max_examples=1000)
@@ -24,16 +24,16 @@ class TestDamerauLevenshtein(unittest.TestCase):
 
     def test_distance_with_empty_string(self):
         self.assertEqual(
-            self.damerau_levenshtein.distance("", "kissa"), 5)
+            self.damerau_levenshtein.distance("", self.word1), 5)
         self.assertEqual(
-            self.damerau_levenshtein.distance("kissa", ""), 5)
+            self.damerau_levenshtein.distance(self.word1, ""), 5)
         self.assertEqual(
             self.damerau_levenshtein.distance("", ""), 0)
 
     def test_distance_with_none(self):
         self.assertEqual(
-            self.damerau_levenshtein.distance(None, "kissa"), 5)
+            self.damerau_levenshtein.distance(None, self.word1), 5)
         self.assertEqual(
-            self.damerau_levenshtein.distance("kissa", None), 5)
+            self.damerau_levenshtein.distance(self.word1, None), 5)
         self.assertEqual(
             self.damerau_levenshtein.distance(None, None), 0)

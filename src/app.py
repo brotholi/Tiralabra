@@ -36,6 +36,20 @@ def check():
     return render_template("result.html", result=similar_words, input=input_text)
 
 
+@app.route("/correct", methods=["POST"])
+def correct():
+    """Metodi, joka ottaa vastaan käyttäjän syöttämän tekstin a korjaa sen oikeinkirjoituksen service-luokkien avulla
+
+    Returns:
+        result.html-sivu, jossa on korjattu teksti
+    """
+    input_text = request.form.get("input")
+    input_words = vocabulary_service.parse_text(input_text)
+    corrected_words = vocabulary_service.fix_typos(input_words)
+    output_text = vocabulary_service.combine_text(corrected_words)
+    return render_template("correction.html", correction=output_text)
+
+
 @app.route("/<input>/add", methods=["POST"])
 def add(input: str):
     """Metodi, joka ottaa vastaan käyttäjän syöttämän sanan ja lisää sen sanastoon

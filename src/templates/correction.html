@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Typotarkistin
+{% endblock %}
+
+{% block content %}
+<br>
+<h3 style="text-align:right"><a href="/">Takaisin etusivulle</a></h3>
+<h2>Korjattu teksti:</h2> <strong>{{ input }}</strong> </p>
+<br>
+<textarea id="textbox" rows="15" cols="40">{{ correction }}</textarea></textarea>
+<br>
+<br>
+<br>
+<br>
+<button class="smallbutton" onclick="copyText()">Kopioi teksti</button>
+<script>
+    function copyText() {
+        var textarea = document.getElementById("textbox");
+        textarea.select();
+    textarea.setSelectionRange(0, 99999); /* For mobile devices */
+    document.execCommand("copy");
+    alert("Teksti kopioitu");
+    }
+</script>    
+<br>
+<br>
+<br>
+{% endblock %}
