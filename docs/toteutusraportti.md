@@ -3,7 +3,11 @@
 ## Ohjelman yleisrakenne
 Typotarkistin-sovellus tarkastaa käyttäjän antamasta syötteestä kirjoitusvirheet vertailemalla niitä trie-tietorakenteessa olevaan sanastoon. Vertailu suoritetaan algoritmilla, joka tutkii Damerau-Levenshteinin etäisyyttä kahden sanan välillä. Algoritmi määrittelee kahden sanan etäisyydelle eräänlaisen kustannuksen sen mukaan, miten toisesta sanasta saadaan muokkaamalla toinen sana. Tämä kustannus on jaettu seuraaviin luokkiin: kirjaimen poistoon, lisäykseen ja korvaamiseen, sekä vierekkäisten merkkien paikkojen vaihtamiseen. Typotarkistin laskee näiden operaatioiden kustannusten perusteella etäisyyden sanaston sanoille ja käyttäjän antamalle syötteelle. 
 
-Kun sovellus käynnistyy, tallennetaan aivan aluksi vocabularyService-luokalle annetussa csv-tiedostossa olevat sanat trie-tietorakenteeseen. Käytännössä nämä sanat on saatu avoindata.fi-sivustolta löydetystä avoimeen käyttöön tarkoitetusta Joukahainen-tietokannasta, jonne on kerätty paljon yleisiä suomen sanoja. Nämä sanat on harjoitustyön yksinkertaistamiseksi talletettu csv-tiedostoon. Käyttäjälle sanaston tallentamista ei näytetä, vaan ohjelman käynnistämisen jälkeen käyttäjälle avataan etusivu, jonka tekstikenttään käyttäjä voi syöttää enintään 20 merkkisen tekstin. Tarkistamisen jälkeen käyttäjälle annetaan joko ilmoitus siitä, että sanassa ei ole virhettä, eli se on löytynyt trie-rakenteesta, tai korjausehdotuksena sanat, jotka ovat lähellä sanaa. Korjausehdotuksina annetut sanat ovat korkeintaan yhden etäisyyden päässä toisistaan. Jos läheistä sanaa ei löydy sanastosta, tästä ilmoitetaan käyttäjälle.
+Kun sovellus käynnistyy, tallennetaan aivan aluksi vocabularyService-luokalle annetussa csv-tiedostossa olevat sanat trie-tietorakenteeseen. Käytännössä nämä sanat on saatu avoindata.fi-sivustolta löydetystä avoimeen käyttöön tarkoitetusta Joukahainen-tietokannasta, jonne on kerätty paljon yleisiä suomen sanoja. Nämä sanat on harjoitustyön yksinkertaistamiseksi talletettu csv-tiedostoon. 
+
+Käyttäjälle sanaston tallentamista ei näytetä, vaan ohjelman käynnistämisen jälkeen käyttäjälle avataan etusivu, jonka tekstikenttään käyttäjä voi syöttää joko yksittisen tarkistettavan sanan tai pitemmän tekstin. Jos syötettiin ainoastaan yksi tana, käyttäjälle annetaan joko ilmoitus siitä, että sanassa ei ole virhettä, eli se on löytynyt trie-rakenteesta, tai korjausehdotuksena sanat, jotka ovat lähellä sanaa. Korjausehdotuksina annetut sanat ovat korkeintaan yhden etäisyyden päässä toisistaan. Jos läheistä sanaa ei löydy sanastosta, tästä ilmoitetaan käyttäjälle.
+
+Jos käyttäjä antaa pitemmän tekstin, sovellus korjaa sen suoraan tekstikentään. Jos sana löytyy sanastosta tai jos sille ei löydy läheisiä sanoja, sanaa ei korjata. Sen sijaan virheelliset sanat korvataan ensimmäisellä läheisellä sanalla, joka löydetään etäisyyksiä tutkimalla.
 
 Käyttäjän on mahdollista pyytää sanan lisäämistä sanastoon, mikä ei onnistu, jos sana löytyy jo sanastosta. Tämä on vielä työn alla [TODO].
 
@@ -17,11 +21,8 @@ Trien aikavaativuus:
 
 
 ## Puutteet ja parannusmahdollisuudet
-[TODO]
 
 Kirjoitusvirheiden korjaaja osaa korjata vain perusmuotoisia sanoja, eli se ei tunnista eri sijapäätteissä olevia sanoja tai verbien eri aika- tai persoonamuotoja, sillä näitä ei ole tallennettuna triessä. Tätä olisi mahdollista kehittää tulevaisuudessa, sillä tämän kurssin puitteissa tähän ei ole ollut aikaa.
-
-Hitaus?
 
 
 ## Laajojen kielimallien käyttö
