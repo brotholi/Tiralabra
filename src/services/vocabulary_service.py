@@ -73,7 +73,7 @@ class VocabularyService:
         similar_words = []
         for vocabulary_word in vocabulary:
             distance = self.damerau_levenshtein.distance(word.lower(), vocabulary_word)
-            if distance <= 1:
+            if distance <= 1 and len(vocabulary_word) >= 2:
                 similar_words.append(vocabulary_word)
         return similar_words
 
@@ -136,21 +136,21 @@ class VocabularyService:
         corrected_words = []
 
         for word in words:
-            # Make sure punctuation marks are preserved
+            # Välimerkit talteen
             punctuation_mark = ""
             if word[-1] in [".", ",", "!", "?"]:
                 punctuation_mark = word[-1]
                 word = word[:-1]
 
-            if not self.find_word_in_vocabulary(word):
+            if len(word) > 1 and not self.find_word_in_vocabulary(word):
                 similar_words = self.find_similar_words(word)
-        # No similar words were found, assume word is correct
+            # Sanastosta ei löytynyt läheistä sanaa, joten ei korjata
                 if len(similar_words) == 0:
                     corrected_words.append(word + punctuation_mark)
                 else:
                     corrected_words.append(similar_words[0] + punctuation_mark)
 
-        # Word was found in vocabulary, so it is correct
+            # Sana löytyi sanastosta, joten ei korjata tai sana on yhden merkin mittainen
             else:
                 corrected_words.append(word + punctuation_mark)
 

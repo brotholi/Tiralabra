@@ -7,4 +7,3 @@ htmlcov
 .vscode
 .hypothesis
 src/__init__.py
-src/trie_performance.py
