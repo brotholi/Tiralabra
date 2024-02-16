@@ -4,7 +4,7 @@ Tällä viikolla koodasin sovellukseen ominaisuuden, jolla voi suoraan syöttä�
 
 Lisäksi jatkoin algoritmien testausta. Testasin Damerau-Levensthein  -algoritmia muutamilla isoilla syötteillä ja tein siihen pieniä muokkauksia. Lisäksi tein enimmäkseen käyttöliittymätestausta erilaisilla syötteillä ja muokkasin syötteen minimipituuden kahteen merkkiin, että sovellus osaisi korjata kahden merkin pituiset sanat ja antaa näille oikeat korjausehdotukset (eikä vain yksittäisiä kirjaimia).
 
-Jatkoin dokumentaation, testausraportin ja toteutusraportin kirjoittamista sekä tein vertaisarvion toisen opiskelijan projektiin.
+Jatkoin testausraportin ja toteutusraportin kirjoittamista sekä tein vertaisarvion toisen opiskelijan projektiin.
 
 Opin tällä viikolla eniten uutta vertaisarviota tehdessä, kun tutustuin 2048-solveriin, joka käyttää expectimax-algoritmia. 
 
