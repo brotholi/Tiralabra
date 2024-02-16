@@ -22,6 +22,8 @@ Tämä on Algoritmit ja tekoäly -kurssilla tehtävä kirjoitusvirheitä korjaav
 
 [Viikko 4](./docs/viikkoraportit/viikkoraportti4.md)
 
+[Viikko 5](./docs/viikkoraportit/)
+
 
 
 # Käyttöohje
