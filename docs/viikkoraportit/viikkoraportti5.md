@@ -6,7 +6,7 @@ Lisäksi jatkoin algoritmien testausta. Testasin Damerau-Levensthein  -algoritmi
 
 Jatkoin dokumentaation, testausraportin ja toteutusraportin kirjoittamista sekä tein vertaisarvion toisen opiskelijan projektiin.
 
-Ensi viikolla aion ainakin jatkaa sovelluksen testaamista ja valmistautua loppupalautukseen. 
+Ensi viikolla aion ainakin jatkaa sovelluksen testaamista ja valmistautua loppupalautukseen. Lisäksi ensi viikolla on toinen vertaisarviointi.
 
 
 ## Tuntikirjanpito
