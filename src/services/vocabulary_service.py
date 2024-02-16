@@ -106,9 +106,9 @@ class VocabularyService:
         """
         if not text:
             return []
-        
+
         return text.split()
-    
+
     def combine_text(self, words):
         """Metodi, joka yhdistää sanat tekstiksi
 
@@ -120,9 +120,9 @@ class VocabularyService:
         """
         if not words:
             return ""
-    
+
         return " ".join(words)
-    
+
     def fix_typos(self, words):
         """Metodi, joka korjaa tekstissä olevat kirjoitusvirheet
         Args:
@@ -136,7 +136,7 @@ class VocabularyService:
         corrected_words = []
 
         for word in words:
-        # Make sure punctuation marks are preserved
+            # Make sure punctuation marks are preserved
             punctuation_mark = ""
             if word[-1] in [".", ",", "!", "?"]:
                 punctuation_mark = word[-1]
@@ -150,9 +150,8 @@ class VocabularyService:
                 else:
                     corrected_words.append(similar_words[0] + punctuation_mark)
 
-        # Word was found in vocabulary, so it is correct            
+        # Word was found in vocabulary, so it is correct
             else:
                 corrected_words.append(word + punctuation_mark)
 
         return corrected_words
-    

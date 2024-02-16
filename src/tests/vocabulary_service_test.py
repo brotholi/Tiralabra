@@ -47,25 +47,30 @@ class TestVocabularyService(unittest.TestCase):
     def test_add_existing_word_to_vocabulary(self):
         self.assertFalse(
             self.vocabulary_service.add_word_to_vocabulary("kissa"))
-        
+
     def test_parse_text(self):
-        self.assertEqual(self.vocabulary_service.parse_text("kissa koira"), ["kissa", "koira"])
-        self.assertEqual(self.vocabulary_service.parse_text("kissa, koira! moi"), ["kissa,", "koira!", "moi"])
+        self.assertEqual(self.vocabulary_service.parse_text(
+            "kissa koira"), ["kissa", "koira"])
+        self.assertEqual(self.vocabulary_service.parse_text(
+            "kissa, koira! moi"), ["kissa,", "koira!", "moi"])
 
     def test_parse_text_with_none(self):
         self.assertEqual(self.vocabulary_service.parse_text(None), [])
 
     def test_combine_text(self):
-        self.assertEqual(self.vocabulary_service.combine_text(["kissa", "koira"]), "kissa koira")
-    
+        self.assertEqual(self.vocabulary_service.combine_text(
+            ["kissa", "koira"]), "kissa koira")
+
     def test_combine_text_with_empty_list(self):
         self.assertEqual(self.vocabulary_service.combine_text([]), "")
 
     def test_fix_typos(self):
-        self.assertEqual(self.vocabulary_service.fix_typos(["kisda", "koire"]), ["kissa", "koira"])
-        self.assertEqual(self.vocabulary_service.fix_typos(["kisda,", "koiru,", "kalak."]), ["kissa,", "koira,", "kala."])
-        self.assertEqual(self.vocabulary_service.fix_typos(["kissantassu", "ja", "koira"]), ["kissantassu", "ja", "koira"])
+        self.assertEqual(self.vocabulary_service.fix_typos(
+            ["kisda", "koire"]), ["kissa", "koira"])
+        self.assertEqual(self.vocabulary_service.fix_typos(
+            ["kisda,", "koiru,", "kalak."]), ["kissa,", "koira,", "kala."])
+        self.assertEqual(self.vocabulary_service.fix_typos(
+            ["kissantassu", "ja", "koira"]), ["kissantassu", "ja", "koira"])
 
     def test_fix_typos_with_none(self):
         self.assertEqual(self.vocabulary_service.fix_typos(None), [])
-
