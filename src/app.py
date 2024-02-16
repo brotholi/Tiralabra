@@ -27,10 +27,10 @@ def check():
         result.html-sivu, jossa annetaan käyttäjälle palautetta syötetystä sanasta
     """
     input_text = request.form.get("input")
-    if vocabulary_service.find_word_in_vocabulary(input_text.lower()):
+    if vocabulary_service.find_word_in_vocabulary(input_text):
         return render_template("result.html", input=input_text, message="(Ei kirjoitusvirheitä)")
 
-    similar_words = vocabulary_service.find_similar_words(input_text.lower())
+    similar_words = vocabulary_service.find_similar_words(input_text)
     if len(similar_words) == 0:
         return render_template("result.html", input=input_text, message="Sanaa ei löytynyt sanastosta")
     return render_template("result.html", result=similar_words, input=input_text)
@@ -44,7 +44,7 @@ def correct():
         result.html-sivu, jossa on korjattu teksti
     """
     input_text = request.form.get("input")
-    input_words = vocabulary_service.parse_text(input_text.lower())
+    input_words = vocabulary_service.parse_text(input_text)
     corrected_words = vocabulary_service.fix_typos(input_words)
     output_text = vocabulary_service.combine_text(corrected_words)
     return render_template("correction.html", correction=output_text)

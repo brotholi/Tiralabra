@@ -43,7 +43,7 @@ class VocabularyService:
         Returns:
             bool: True, jos sana löytyy, muuten False
         """
-        return self.trie.search(word)
+        return self.trie.search(word.lower())
 
     def _read_file(self):
         """Metodi, joka lukee tiedostossa olevat sanat ja tallentaa ne listaan
@@ -57,11 +57,12 @@ class VocabularyService:
                 words.append(row[0])
         return words
 
-    def find_similar_words(self, word):
-        """Metodi, joka vertaa annettua sanaa sanaston sanoihin ja palauttaa sanat, joiden etäisyys on 1 tai 0
+    def find_similar_words(self, word, quick_fix=False):
+        """Metodi, joka vertaa annettua sanaa sanaston sanoihin ja palauttaa sanat, joiden etäisyys on 1 tai 0.
 
         Args:
             word (str): etsittävä sana
+            quick_fix (bool, optional): boolean-arvo, joka määrittää, palautetaanko vain yksi sana. Default-arvo on alse.
 
         Returns:
             list: lista sanoista, joiden etäisyys damerau-levenshtein-algoritmin mukaan on 1 tai 0
@@ -75,6 +76,8 @@ class VocabularyService:
             distance = self.damerau_levenshtein.distance(word.lower(), vocabulary_word)
             if distance <= 1 and len(vocabulary_word) >= 2:
                 similar_words.append(vocabulary_word)
+                if quick_fix:
+                    return similar_words
         return similar_words
 
     def add_word_to_vocabulary(self, word):
@@ -142,8 +145,8 @@ class VocabularyService:
                 punctuation_mark = word[-1]
                 word = word[:-1]
 
-            if len(word) > 1 and not self.find_word_in_vocabulary(word):
-                similar_words = self.find_similar_words(word)
+            if len(word) > 1 and not self.find_word_in_vocabulary(word.lower()):
+                similar_words = self.find_similar_words(word.lower(), True)
             # Sanastosta ei löytynyt läheistä sanaa, joten ei korjata
                 if len(similar_words) == 0:
                     corrected_words.append(word + punctuation_mark)
