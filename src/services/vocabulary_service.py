@@ -31,7 +31,7 @@ class VocabularyService:
         """
         vocabulary_words = self._read_file()
         for word in vocabulary_words:
-            self.trie.add(word)
+            self.trie.add(word.lower())
         return
 
     def find_word_in_vocabulary(self, word):
@@ -72,7 +72,7 @@ class VocabularyService:
         vocabulary = self.trie.get_trie_content()
         similar_words = []
         for vocabulary_word in vocabulary:
-            distance = self.damerau_levenshtein.distance(word, vocabulary_word)
+            distance = self.damerau_levenshtein.distance(word.lower(), vocabulary_word)
             if distance <= 1:
                 similar_words.append(vocabulary_word)
         return similar_words
