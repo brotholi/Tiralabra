@@ -40,7 +40,7 @@ Esimerkkitulosteita aikavaativuustesteistä:
 - Searching 1000000 character words took 4.71832493400143 seconds
 
 ## Damerau-Levenshtein
-Etäisyyden laskentaa suorittavaa distance-algoritmia on testattu antamalla sille suuria syötteitä useita kertoja putkeen. Tällä on varmistettu, että algoritmi toimii, jos läpi käytävä sanasto on suuri ja algoritmia kutsutaan useita kertoja putkeen. Esimerkiksi 1-100 -kokoiselle syötteelle etäisyyden laskenta kestää keskimäärin 0.0012221320034150266 sekuntia. 
+Etäisyyden laskentaa suorittavaa distance-algoritmia on testattu antamalla sille suuria syötteitä useita kertoja putkeen. Tällä on varmistettu, että algoritmi toimii, jos läpi käytävä sanasto on suuri ja algoritmia kutsutaan useita kertoja putkeen. Esimerkiksi 1-100 -kokoiselle syötteelle etäisyyden laskenta kestää keskimäärin 0.0012 sekuntia. 
 
 
 ## Käyttöliittymätestaus
