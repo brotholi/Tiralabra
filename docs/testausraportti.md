@@ -9,9 +9,9 @@ Yksikkötesteissä on käytetty unnittest-kirjastoa ja ne on suunniteltu suorite
 ![image](https://github.com/brotholi/tiralabra/assets/91954165/400f6665-97d0-45ef-9097-10d5cee1a175)
 
 
-## Suorituskyvyn testaus
+## Suoritusaikaa mittaavat testit
 
-Sovelluksen suorituskykyä on testattu ajamalla manuaalisesti testejä, joissa annetaan suuria syötteitä algoritmeille. Tällä tutkitaan aikavaativuuksia ja sitä, käyttäytyvätkö algoritmit odotetulla tavalla erikoisilla syötteillä
+Algoritmeja on testattu ajamalla manuaalisesti testejä, joissa annetaan suuria syötteitä algoritmeille. Tällä tutkitaan sitä, pystyvätkö algoritmit käsittelemään pitkiä syötteitä useita kertoja.
 
 ## Trie
 **Trie-luokalle on tehty seuraavanlaisia testejä:**
@@ -40,5 +40,12 @@ Esimerkkitulosteita aikavaativuustesteistä:
 - Searching 1000000 character words took 4.71832493400143 seconds
 
 ## Damerau-Levenshtein
+Etäisyyden laskentaa suorittavaa distance-algoritmia on testattu antamalla sille suuria syötteitä useita kertoja putkeen. Tällä on varmistettu, että algoritmi toimii, jos läpi käytävä sanasto on suuri ja algoritmia kutsutaan useita kertoja putkeen. Esimerkiksi 1-100 -kokoiselle syötteelle etäisyyden laskenta kestää keskimäärin 0.0012221320034150266 sekuntia. 
+
+
+## Käyttöliittymätestaus
+
+Sovellukselle on tehty käyttöliittymältä testausta antamalla sille erilaisia tekstisyötteitä ja varmistamalla, että sana joko tunnistetaan tai sille ehdotetaan jokin läheinen sana.
+
 
 [tbd]
