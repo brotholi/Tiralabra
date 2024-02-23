@@ -14,7 +14,7 @@ Yksikkötesteissä on käytetty unnittest-kirjastoa ja ne on suunniteltu suorite
 Sovellukselle on tehty käyttöliittymältä manuaalista testausta antamalla sille erilaisia tekstisyötteitä ja varmistamalla, että sana joko tunnistetaan tai annetaan korjausehdotus. Myös sanan lisäämistä sanastoon on testattu.
 
 ## Testitapaukset:
- ### Sanan tarkistus:
+ ### 1.) Sanan tarkistus:
    #### Virheetön sana
    - syötä sanastossa oleva sana (esimerkiksi "koira") tekstikenttään.
    - sovelluksen pitäisi tulostaa: *syötit sanan koira (ei kirjoitusvirheitä)*
@@ -29,15 +29,19 @@ Sovellukselle on tehty käyttöliittymältä manuaalista testausta antamalla sil
    - sovelluksen pitäisi tulostaa: *syötit sanan aaaaaaaaa, sanaa ei löytynyt sanastosta*
 
  
-### Sanan lisääminen sanakirjaan:
+### 2.) Sanan lisääminen sanakirjaan:
    - kun olet pyytänyt sanan korjaamista, pyydä sovellusta lisäämään seuraavat sanat
+
 **a) sana, joka on jo sanastossa (esimerkiksi pankkiiri)**
+
    - sovelluksen pitäisi tulostaa: valitettavasti sanaa ei voitu lisätä sanastoon
+
 **b) sana, jota ei löytynyt korjauksessa sanastosta**
+
    - sovelluksen pitäisi tulostaa: *sana lisätty sanastoon!*
 
 
-### Pitemmän tekstin korjaaminen
+### 3.) Pitemmän tekstin korjaaminen
    #### Virheetön teksti 
    - syötä teksi, jossa on ei ole kirjoitusvirheitä. Koska sanastossa ei välttämättä ole kaikkia taivutusmuotoja, syötä teksti, jossa sanat ovat perusmuodossa, esimerkiksi: hei maailma!
    - sovelluksen pitäisi antaa teksti samassa muodossa kuin se annettiin
