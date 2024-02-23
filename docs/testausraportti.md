@@ -30,7 +30,7 @@ Sovellukselle on tehty käyttöliittymältä manuaalista testausta antamalla sil
 
  
 ### 2.) Sanan lisääminen sanakirjaan:
-   - kun olet pyytänyt sanan korjaamista, pyydä sovellusta lisäämään seuraavat sanat
+kun olet pyytänyt sanan korjaamista, pyydä sovellusta lisäämään seuraavat sanat
 
 **a) sana, joka on jo sanastossa (esimerkiksi pankkiiri)**
 
