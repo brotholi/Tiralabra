@@ -5,18 +5,18 @@ Typotarkistin-sovellus tarkastaa käyttäjän antamasta syötteestä kirjoitusvi
 
 Kun sovellus käynnistyy, tallennetaan aivan aluksi vocabularyService-luokalle annetussa tekstitiedostossa olevat sanat trie-tietorakenteeseen. Käytännössä nämä sanat on saatu avoindata.fi-sivustolta löydetystä avoimeen käyttöön tarkoitetusta postegreSQL Joukahainen-tietokannasta, jonne on kerätty paljon yleisiä suomen sanoja. Nämä sanat on harjoitustyön yksinkertaistamiseksi talletettu yhteen tekstitiedostoon. 
 
-Ohjelman käynnistämisen jälkeen käyttäjälle avataan etusivu, jonka tekstikenttään käyttäjä voi syöttää joko yksittisen tarkistettavan sanan tai pitemmän tekstin. Jos syötettiin ainoastaan yksi tana, käyttäjälle annetaan joko ilmoitus siitä, että sanassa ei ole virhettä, eli se on löytynyt trie-rakenteesta, tai korjausehdotuksena sanat, jotka ovat lähellä sanaa. Korjausehdotuksina annetut sanat ovat korkeintaan yhden etäisyyden päässä toisistaan. Jos läheistä sanaa ei löydy sanastosta, tästä ilmoitetaan käyttäjälle.
+Ohjelman käynnistämisen jälkeen käyttäjälle avataan etusivu, jonka tekstikenttään käyttäjä voi syöttää joko yksittäisen tarkistettavan sanan tai pitemmän tekstin. Jos syötettiin ainoastaan yksi sana, käyttäjälle annetaan joko ilmoitus siitä, että sanassa ei ole virhettä, eli se on löytynyt trie-rakenteesta, tai korjausehdotuksena sanat, jotka ovat lähellä sanaa. Korjausehdotuksina annetut sanat ovat korkeintaan yhden etäisyyden päässä toisistaan. Jos läheistä sanaa ei löydy sanastosta, tästä ilmoitetaan käyttäjälle.
 
-Jos käyttäjä antaa pitemmän tekstin, sovellus korjaa sen suoraan tekstikentään. Jos sana löytyy sanastosta tai jos sille ei löydy läheisiä sanoja, sanaa ei korjata. Sen sijaan virheelliset sanat korvataan ensimmäisellä läheisellä sanalla, joka löydetään etäisyyksiä tutkimalla.
+Jos käyttäjä antaa pitemmän tekstin, sovellus korjaa sen suoraan tekstikentään. Jos sana löytyy sanastosta tai jos sille ei löydy läheisiä sanoja, sanaa ei korjata. Mikäli kirjoitetussa tekstissä on sanoja, joita ei löydetty sanastossa, annetaan käyttäjälle viesti "kaikkia sanoja ei voitu korjata" Sen sijaan virheelliset sanat korvataan ensimmäisellä läheisellä sanalla, joka löydetään etäisyyksiä tutkimalla. Jos teksti oli virheetön tai kaikille väärin kirjoitetuille sanoille löydettiin jokin vastine, annetaan ilmoitus "korjaus onnistui".
+Pitemmän korjatun tekstin voi kopioida kopioi-nappulalla suoraan tekstikentästä.
 
-Käyttäjän on mahdollista pyytää sanan lisäämistä sanastoon, mikä ei onnistu, jos sana löytyy jo sanastosta.
+Käyttäjän on myös mahdollista pyytää sanan lisäämistä sanastoon, mikä ei onnistu, jos sana löytyy jo sanastosta.
 
 ## Tila- ja aikavaativuudet
-[TODO]
 
-Damerau-Lehvensteinin algoritmin aikavaativuus: 
+Damerau-Lehvensteinin etäisyyttä tutkivan algoritmin aikavaativuus on lähteiden mukainen O(mn), missä m ja n ovat verrattavien merkkijonojen pituuksia.
 
-Trien aikavaativuus:
+Trien kaikki metodit, etsintä, lisäys ja koko sisällön palauttaminen, vievät aikaa O(n).
 
 
 
