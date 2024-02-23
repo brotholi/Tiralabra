@@ -14,18 +14,18 @@ Yksikkötesteissä on käytetty unnittest-kirjastoa ja ne on suunniteltu suorite
 Sovellukselle on tehty käyttöliittymältä manuaalista testausta antamalla sille erilaisia tekstisyötteitä ja varmistamalla, että sana joko tunnistetaan tai annetaan korjausehdotus. Myös sanan lisäämistä sanastoon on testattu.
 
 ## Testitapaukset:
- ### 1.) Sanan tarkistus:
+ ### 1.) Yhden sanan tarkistus:
    #### Virheetön sana
-   - syötä sanastossa oleva sana (esimerkiksi "koira") tekstikenttään.
+   - syötä sanastossa oleva sana, esimerkiksi "koira"
    - sovelluksen pitäisi tulostaa: *syötit sanan koira (ei kirjoitusvirheitä)*
    
    #### Sana, jossa on pieni kirjoitusvirhe
-   - syötä sana, jossa on pieni kirjoitusvirhe ("esimerkiksi "koifa).
+   - syötä sana, jossa on pieni kirjoitusvirhe, esimerkiksi "koifa"
    - sovelluksen pitäisi tulostaa: *syötit sanan koifa, tarkoititko [lista ehdotuksia]*
    - ehdotuksissa pitäisi olla ainakin sana koira ja mahdollisesti muita sanoja, joiden etäisyys koifa-syötteestä on 1.
    
    #### Muu tekstisyöte, jota ei voi korjata
-   - syötä sana tai teksti, joka ei muistuta mitään sanaa, esimerkiksi ("aaaaaaaaa)
+   - syötä sana tai teksti, joka ei muistuta mitään sanaa, esimerkiksi "aaaaaaaaa"
    - sovelluksen pitäisi tulostaa: *syötit sanan aaaaaaaaa, sanaa ei löytynyt sanastosta*
 
  
