@@ -11,4 +11,4 @@ Eniten oppimista tapahtui taas vertaisarviota tehdessä. Omaan projektiin sai uu
 | 20.2. | 1 h            | Bugikorjausta |
 | 22.2.  | 1 h 			| Vertaisarvion tekemistä  |
 | 23.2.  | 6 h 			| Testausta, toteutusta ja dokumentointia  |
- Yhteensä  8 h    
+| Yhteensä | 8 h   | |  
