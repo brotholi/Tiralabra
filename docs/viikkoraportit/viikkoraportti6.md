@@ -12,8 +12,8 @@ Lisäksi jatkoin toteutus- ja testausraportin kirjoittamista.
 ## Tuntikirjanpito
 
 | Päivä | Käytetty aika | Kuvaus |
-| ----- | ------------- | ------ |h
-| 20.2. | 1 h            | Bugin korjausta |
-| 22.2  | 1 h 			| Vertaisarviota  |
-| 23.2. | 6 h           | Toteutusta, testaamista ja dokumentointia |
+| ----- | ------------- | ------ |
+| 20.2. | 1 h            | Bugikorjausta |
+| 22.2.  | 1 h 			| Vertaisarvion tekemistä  |
+| 23.2.  | 6 h 			| Testausta, toteutusta ja dokumentointia  |
  Yhteensä  8 h    
