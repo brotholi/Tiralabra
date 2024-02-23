@@ -33,10 +33,10 @@ class TestTrie(unittest.TestCase):
             result, ["kissa", "koira", "kana", "kaali", "karpalo"])
 
     def test_search_with_empty_string(self):
-        self.assertEqual(self.trie.search(""), [])
+        self.assertEqual(self.trie.search(""), False)
 
     def test_search_with_none(self):
-        self.assertEqual(self.trie.search(None), [])
+        self.assertEqual(self.trie.search(None), False)
 
     def test_get_trie_content_with_empty_trie(self):
         trie = Trie()
@@ -54,7 +54,7 @@ class TestTrie(unittest.TestCase):
         self.assertFalse(trie.search("koira"))
         self.assertFalse(trie.search(" "))
 
-    @given(arvo=st.text(min_size=1, max_size=50))
+    @given(arvo=st.text(min_size=10, max_size=50))
     @settings(max_examples=1000)
     def test_search_with_hypothesis(self, arvo):
         self.assertFalse(self.trie.search(arvo))

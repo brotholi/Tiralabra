@@ -6,7 +6,7 @@ from flask import (
 from services.vocabulary_service import VocabularyService
 
 app = Flask(__name__)
-vocabulary_service = VocabularyService("sanasto.csv")
+vocabulary_service = VocabularyService("src/data/sanasto.txt")
 
 
 @app.route("/")
@@ -43,11 +43,14 @@ def correct():
     Returns:
         result.html-sivu, jossa on korjattu teksti
     """
-    input_text = request.form.get("input")
-    input_words = vocabulary_service.parse_text(input_text)
-    corrected_words = vocabulary_service.fix_typos(input_words)
-    output_text = vocabulary_service.combine_text(corrected_words)
-    return render_template("correction.html", correction=output_text)
+    input_words = vocabulary_service.parse_text(request.form.get("input"))
+    correction_output = vocabulary_service.fix_typos(input_words)
+    corrected_words = vocabulary_service.combine_text(correction_output[0])
+    unable_to_correct = correction_output[1]
+    if unable_to_correct:
+        return render_template("correction.html", correction=corrected_words, message="Huom! Kaikkia sanoja ei voitu korjata")
+
+    return render_template("correction.html", correction=corrected_words, message="Korjaus onnistui!")
 
 
 @app.route("/<input>/add", methods=["POST"])
@@ -55,7 +58,7 @@ def add(input: str):
     """Metodi, joka ottaa vastaan käyttäjän syöttämän sanan ja lisää sen sanastoon
 
     Returns:
-        index.html-sivu
+        message.html-sivu, joka sisältää palautteen sanan lisäämisen onnnistumisesta
     """
     input_text = input
     if input_text and vocabulary_service.add_word_to_vocabulary(input_text):

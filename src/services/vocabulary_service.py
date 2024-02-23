@@ -4,7 +4,7 @@ from services.damerau_levenshtein import DamerauLevenshtein
 
 
 class VocabularyService:
-    """Luokka, joka luo tallentaa sanaston trie-tietorakenteeseen
+    """Luokka, joka vastaa sanaston käsittelystä
 
     Atribuutit:
         damerau_levenshtein (DamerauLevenshtein): luokka, joka tutkii etäisyyttä kahden merkkijonon välillä
@@ -50,11 +50,10 @@ class VocabularyService:
         Returns:
             Lista, jossa on sanasto
         """
-        with open(self.file_path, "r") as f:
-            reader = csv.reader(f)
-            words = []
-            for row in reader:
-                words.append(row[0])
+        words = []
+        with open(self.file_path, "r", encoding='UTF-8') as file:
+            for row in file:
+                words.append(row.strip())
         return words
 
     def find_similar_words(self, word, quick_fix=False):
@@ -73,7 +72,8 @@ class VocabularyService:
         vocabulary = self.trie.get_trie_content()
         similar_words = []
         for vocabulary_word in vocabulary:
-            distance = self.damerau_levenshtein.distance(word.lower(), vocabulary_word)
+            distance = self.damerau_levenshtein.distance(
+                word.strip().lower(), vocabulary_word)
             if distance <= 1 and len(vocabulary_word) >= 2:
                 similar_words.append(vocabulary_word)
                 if quick_fix:
@@ -87,14 +87,15 @@ class VocabularyService:
             word (str): lisättävä sana
 
         Returns:
-            bool: True, jos sana lisättiin, muuten False
+            bool: True, jos sana lisättiin eikä sanaa ollut ennestään sanastossa, muuten False
         """
         if not word:
             return False
-        if self.trie.add(word):
-            with open(self.file_path, mode='a', newline='') as file:
-                writer = csv.writer(file)
-                writer.writerow([word])
+        parsed_word = word.strip().lower()
+        if not self.find_word_in_vocabulary(parsed_word):
+            self.trie.add(parsed_word)
+            with open(self.file_path, mode='a', encoding='UTF-8') as file:
+                file.write(parsed_word + "\n")
             return True
         return False
 
@@ -132,11 +133,13 @@ class VocabularyService:
             words (list): lista sanoista
         Returns:
             list: korjatut sanat
+            bool: boolean-arvo, joka kertoo, voitiinko kaikki sanat korjata
         """
         if not words:
-            return []
+            return [[], True]
 
         corrected_words = []
+        unable_to_correct = False
 
         for word in words:
             # Välimerkit talteen
@@ -150,6 +153,7 @@ class VocabularyService:
             # Sanastosta ei löytynyt läheistä sanaa, joten ei korjata
                 if len(similar_words) == 0:
                     corrected_words.append(word + punctuation_mark)
+                    unable_to_correct = True
                 else:
                     corrected_words.append(similar_words[0] + punctuation_mark)
 
@@ -157,4 +161,4 @@ class VocabularyService:
             else:
                 corrected_words.append(word + punctuation_mark)
 
-        return corrected_words
+        return [corrected_words, unable_to_correct]

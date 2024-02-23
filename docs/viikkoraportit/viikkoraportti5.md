@@ -19,4 +19,4 @@ Ensi viikolla aion ainakin jatkaa sovelluksen testaamista ja valmistautua loppup
 | ----- | ------------- | ------ |
 | 15.2. | 2 h            | Vertaisarviota ja dokumentointia |
 | 16.2.  | 8 h 			| Toteutusta ja testausta  |
- Yhteensä  x h    
+ Yhteensä  10 h    

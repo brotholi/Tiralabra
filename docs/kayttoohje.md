@@ -6,7 +6,7 @@ Kun olet kloonannut repositorion omalle koneellesi, käynnistä virtuaaliymäris
 poetry shell
 ```
 
-Tämä vaatii siis, että koneelle on asennettu poetry. Lataa tämän jälkeen projektin riippuvuudet poetrylla komennolla
+Tämä vaatii siis, että koneelle on asennettu poetry. Tämän jälkeen luo virtuaaliympäristö ja lataa projektin riippuvuudet komennolla
 ```bash
 poetry install
 ```

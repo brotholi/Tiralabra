@@ -1,8 +1,9 @@
 .header {
     background: rgb(45, 145, 123);
     font-weight: bold;
-    padding: 1em 1em;
+    padding: 4em 2em;
     font-size: 1em;
+    border-radius: .8em
 }
 
 body {
@@ -15,6 +16,7 @@ body {
 .content {
     background: white;
     padding: 1.5em 2em;
+    border-radius: .8em
  }
 
 ul {
@@ -56,6 +58,7 @@ textarea {
     margin: 4px 2px;
     cursor: pointer;
     float: right;
+    border-radius: .5em
     
   }
 
@@ -74,6 +77,7 @@ textarea {
     margin: 4px 2px;
     cursor: pointer;
     float: right;
+    border-radius: .5em
   }
 
   .smallbutton:hover {

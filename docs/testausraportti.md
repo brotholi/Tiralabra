@@ -9,9 +9,47 @@ Yksikkötesteissä on käytetty unnittest-kirjastoa ja ne on suunniteltu suorite
 ![image](https://github.com/brotholi/tiralabra/assets/91954165/400f6665-97d0-45ef-9097-10d5cee1a175)
 
 
+## Manuaalinen testaus käyttöliittymältä
+
+Sovellukselle on tehty käyttöliittymältä manuaalista testausta antamalla sille erilaisia tekstisyötteitä ja varmistamalla, että sana joko tunnistetaan tai sille ehdotetaan jokin läheinen sana. Myös sanan lisäämistä sanastoon on testattu.
+
+### Testitapaukset:
+ <u> Sanan tarkistus: <u> 
+1.) Virheetön sana
+- syötä sanastossa oleva sana (esimerkiksi "koira") tekstikenttään.
+- sovelluksen pitäisi tulostaa: syötit sanan koira (ei kirjoitusvirheitä)
+
+2.) Sana, jossa on pieni kirjoitusvirhe
+- syötä sana, jossa on pieni kirjoitusvirhe ("esimerkiksi "koifa).
+- sovelluksen pitäisi tulostaa: syötit sanan koifa, tarkoititko [lista ehdotuksia]
+- ehdotuksissa pitäisi olla ainakin sana koira ja mahdollisesti muita sanoja, joiden etäisyys koifa-syötteestä on 1.
+
+3.) Virheellinen teksti
+- syötä sana tai teksti, joka ei muistuta mitään sanaa, esimerkiksi ("aaaaaaaaa)
+- sovelluksen pitäisi tulostaa: syötit sanan aaaaaaaaa, sanaa ei löytynyt sanastosta
+
+<u> Sanan lisääminen sanakirjaan: <u> 
+- kun olet pyytänyt sanan korjaamista, pyydä sovellusta lisäämään seuraavat sanat
+a) sana, joka on jo sanastossa (esimerkiksi pankkiiri)
+- sovelluksen pitäisi tulostaa: valitettavasti sanaa ei voitu lisätä sanastoon
+b) sana, jota ei löytynyt korjauksessa sanastosta
+- sovelluksen pitäisi tulostaa: sana lisätty sanastoon!
+
+<u> Pitemmän tkstin korjaaminen <u> 
+1.) Virheetön teksti 
+- syötä teksi, jossa on ei ole kirjoitusvirheitä. Koska sanastossa ei välttämättä ole kaikkia taivutusmuotoja, syötä teksti, jossa sanat ovat perusmuodossa, esimerkiksi: hei maailma!
+- sovelluksen pitäisi antaa teksti samassa muodossa kuin se annettiin
+2.) Teksti, jossa on typoja
+- syötä teksti, joka sisältää pieniä kirjoitusvirheitä ("esimerkiksi heip maailma!)
+- sovelluksen pitäisi antaa teksti korjattuna: hei maailma!
+3.) Virheellinen teksti, jossa ei oikeita sanoja
+- syötä jokin teksti, joka ei muistuta mitään oikeita sanoja (esimerkiksi aaaaaaaa)
+- sovelluksen pitäisi antaa teksti muokkaamattomana ja ilmoitus: "Kaikkia sanoja ei tunnistettu eikä niitä voitu korjata"
+
+
 ## Suoritusaikaa mittaavat testit
 
-Algoritmeja on testattu ajamalla manuaalisesti testejä, joissa annetaan suuria syötteitä algoritmeille. Tällä tutkitaan sitä, pystyvätkö algoritmit käsittelemään pitkiä syötteitä useita kertoja.
+Algoritmeja on testattu ajamalla manuaalisesti testejä, joissa annetaan suuria syötteitä algoritmeille. Tällä tutkitaan sitä, pystyvätkö algoritmit käsittelemään pitkiä syötteitä useita kertoja. Testaus on tehty, jotta pitemmän tekstin korjaus -ominaisuus toimisi odotetulla tavalla.
 
 ## Trie
 **Trie-luokalle on tehty seuraavanlaisia testejä:**
@@ -42,10 +80,3 @@ Esimerkkitulosteita aikavaativuustesteistä:
 ## Damerau-Levenshtein
 Etäisyyden laskentaa suorittavaa distance-algoritmia on testattu antamalla sille suuria syötteitä useita kertoja putkeen. Tällä on varmistettu, että algoritmi toimii, jos läpi käytävä sanasto on suuri ja algoritmia kutsutaan useita kertoja putkeen. Esimerkiksi 1-100 -kokoiselle syötteelle etäisyyden laskenta kestää keskimäärin 0.0012 sekuntia. 
 
-
-## Käyttöliittymätestaus
-
-Sovellukselle on tehty käyttöliittymältä testausta antamalla sille erilaisia tekstisyötteitä ja varmistamalla, että sana joko tunnistetaan tai sille ehdotetaan jokin läheinen sana.
-
-
-[tbd]

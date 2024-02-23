@@ -27,7 +27,7 @@ class DamerauLevenshtein:
         inf = float("inf")
         distances = [[inf] * (len(word2) + 1) for _ in range(len(word1) + 1)]
 
-        #taulukokon alustus
+        # taulukokon alustus
         for i in range(len(word1) + 1):
             distances[i][0] = i
         for j in range(len(word2) + 1):
@@ -38,11 +38,11 @@ class DamerauLevenshtein:
                 cost = 1
                 if word1[i-1] == word2[j-1]:
                     cost = 0
-                distances[i][j] = min(distances[i][j - 1] + 1, # lisäys
-                                      distances[i - 1][j] + 1, # poisto
-                                      distances[i - 1][j - 1] + cost) # korvaus
-                if i > 1 and j > 1 and word1[i - 1] == word2[j - 2] and word1[i - 2] == word2[j - 1]: 
+                distances[i][j] = min(distances[i][j - 1] + 1,  # lisäys
+                                      distances[i - 1][j] + 1,  # poisto
+                                      distances[i - 1][j - 1] + cost)  # korvaus
+                if i > 1 and j > 1 and word1[i - 1] == word2[j - 2] and word1[i - 2] == word2[j - 1]:
                     distances[i][j] = min(
-                        distances[i][j], distances[i - 2][j - 2] + cost) # kirjaimen siirto
+                        distances[i][j], distances[i - 2][j - 2] + cost)  # kirjaimen siirto
 
         return distances[len(word1)][len(word2)]

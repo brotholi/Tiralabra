@@ -9,6 +9,11 @@ Typotarkistin
 <h3 style="text-align:right"><a href="/">Takaisin etusivulle</a></h3>
 <h2>Korjattu teksti:</h2> <strong>{{ input }}</strong> </p>
 <br>
+{% if message %}
+<b> -- {{ message }} -- </b>
+<br>
+{% endif %}
+<br>
 <textarea id="textbox" rows="15" cols="40">{{ correction }}</textarea></textarea>
 <br>
 <br>
@@ -19,7 +24,7 @@ Typotarkistin
     function copyText() {
         var textarea = document.getElementById("textbox");
         textarea.select();
-    textarea.setSelectionRange(0, 99999); /* For mobile devices */
+    textarea.setSelectionRange(0, 99999);
     document.execCommand("copy");
     alert("Teksti kopioitu");
     }
