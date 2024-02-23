@@ -11,7 +11,7 @@ Yksikkötesteissä on käytetty unnittest-kirjastoa ja ne on suunniteltu suorite
 
 ## Manuaalinen testaus käyttöliittymältä
 
-Sovellukselle on tehty käyttöliittymältä manuaalista testausta antamalla sille erilaisia tekstisyötteitä ja varmistamalla, että sana joko tunnistetaan tai sille ehdotetaan jokin läheinen sana. Myös sanan lisäämistä sanastoon on testattu.
+Sovellukselle on tehty käyttöliittymältä manuaalista testausta antamalla sille erilaisia tekstisyötteitä ja varmistamalla, että sana joko tunnistetaan tai annetaan korjausehdotus. Myös sanan lisäämistä sanastoon on testattu.
 
 ## Testitapaukset:
  <u> Sanan tarkistus: <u> 
