@@ -24,17 +24,19 @@ Tämä on Algoritmit ja tekoäly -kurssilla tehtävä kirjoitusvirheitä korjaav
 
 [Viikko 5](./docs/viikkoraportit/viikkoraportti5.md)
 
+[Viikko 6](./docs/viikkoraportit/viikkoraportti6.md)
+
 
 
 # Käyttöohje
 
-Kun olet kloonannut repositorion omalle koneellesi, käynnistä virtuaaliymäristö projektin juurihakemistossa komennolla
+Kun olet kloonannut repositorion omalle koneellesi, käynnistä poetry projektin juurihakemistossa komennolla
 
 ```bash
 poetry shell
 ```
 
-Tämä vaatii siis, että koneelle on asennettu poetry. Lataa tämän jälkeen projektin riippuvuudet poetrylla komennolla
+Tämä vaatii siis, että koneelle on asennettu poetry. Tämän jälkeen lataa projektin riippuvuudet komennolla
 ```bash
 poetry install
 ```
