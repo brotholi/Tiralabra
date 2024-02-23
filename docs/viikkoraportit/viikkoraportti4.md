@@ -17,5 +17,4 @@ Ensi viikolla ajattelin vertaisarvioinnin lisäksi laajentaa sovelluksen toimint
 | 8.2.  | 2 h            | Dokumentaatiota yms. |
 | 9.2.  | 8 h 			| Suorituskykyestausta ja yksikkötestien kirjoittamista |
 | 10.2. | 2 h    | Testausta ja dokumenttien kirjoittamista  |
-
- Yhteensä  12 h    
+| Yhteensä |  12 h ||
