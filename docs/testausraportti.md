@@ -15,16 +15,16 @@ Sovellukselle on tehty käyttöliittymältä manuaalista testausta antamalla sil
 
 ### Testitapaukset:
  <u> Sanan tarkistus: <u> 
-1.) Virheetön sana
+#### Virheetön sana
 - syötä sanastossa oleva sana (esimerkiksi "koira") tekstikenttään.
 - sovelluksen pitäisi tulostaa: syötit sanan koira (ei kirjoitusvirheitä)
 
-2.) Sana, jossa on pieni kirjoitusvirhe
+#### Sana, jossa on pieni kirjoitusvirhe
 - syötä sana, jossa on pieni kirjoitusvirhe ("esimerkiksi "koifa).
 - sovelluksen pitäisi tulostaa: syötit sanan koifa, tarkoititko [lista ehdotuksia]
 - ehdotuksissa pitäisi olla ainakin sana koira ja mahdollisesti muita sanoja, joiden etäisyys koifa-syötteestä on 1.
 
-3.) Virheellinen teksti
+#### Muu tekstisyöte, jota ei voi korjata
 - syötä sana tai teksti, joka ei muistuta mitään sanaa, esimerkiksi ("aaaaaaaaa)
 - sovelluksen pitäisi tulostaa: syötit sanan aaaaaaaaa, sanaa ei löytynyt sanastosta
 
@@ -36,13 +36,13 @@ b) sana, jota ei löytynyt korjauksessa sanastosta
 - sovelluksen pitäisi tulostaa: sana lisätty sanastoon!
 
 <u> Pitemmän tkstin korjaaminen <u> 
-1.) Virheetön teksti 
+#### Virheetön teksti 
 - syötä teksi, jossa on ei ole kirjoitusvirheitä. Koska sanastossa ei välttämättä ole kaikkia taivutusmuotoja, syötä teksti, jossa sanat ovat perusmuodossa, esimerkiksi: hei maailma!
 - sovelluksen pitäisi antaa teksti samassa muodossa kuin se annettiin
-2.) Teksti, jossa on typoja
+#### Teksti, jossa on typoja
 - syötä teksti, joka sisältää pieniä kirjoitusvirheitä ("esimerkiksi heip maailma!)
 - sovelluksen pitäisi antaa teksti korjattuna: hei maailma!
-3.) Virheellinen teksti, jossa ei oikeita sanoja
+#### Virheellinen teksti, jossa ei oikeita sanoja
 - syötä jokin teksti, joka ei muistuta mitään oikeita sanoja (esimerkiksi aaaaaaaa)
 - sovelluksen pitäisi antaa teksti muokkaamattomana ja ilmoitus: "Kaikkia sanoja ei tunnistettu eikä niitä voitu korjata"
 
