@@ -34,7 +34,7 @@ Kun olet pyytänyt sanan korjaamista, pyydä sovellusta lisäämään seuraavat 
 
 **a) sana, joka on jo sanastossa (esimerkiksi pankkiiri)**
 
-   - sovelluksen pitäisi tulostaa: valitettavasti sanaa ei voitu lisätä sanastoon
+   - sovelluksen pitäisi tulostaa: *valitettavasti sanaa ei voitu lisätä sanastoon*
 
 **b) sana, jota ei löytynyt korjauksessa sanastosta**
 
