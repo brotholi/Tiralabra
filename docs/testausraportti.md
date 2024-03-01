@@ -13,49 +13,43 @@ Yksikkötesteissä on käytetty unnittest-kirjastoa ja ne on suunniteltu suorite
 
 Sovellukselle on tehty käyttöliittymältä manuaalista testausta antamalla sille erilaisia tekstisyötteitä ja varmistamalla, että sana joko tunnistetaan tai annetaan korjausehdotus. Myös sanan lisäämistä sanastoon on testattu.
 
-## Testitapaukset:
- ### 1.) Yhden sanan tarkistus:
-   #### Virheetön sana
-   - syötä sanastossa oleva sana, esimerkiksi "koira"
-   - sovelluksen pitäisi tulostaa: *syötit sanan koira (ei kirjoitusvirheitä)*
-   
-   #### Sana, jossa on pieni kirjoitusvirhe
-   - syötä sana, jossa on pieni kirjoitusvirhe, esimerkiksi "koifa"
-   - sovelluksen pitäisi tulostaa: *syötit sanan koifa, tarkoititko [lista ehdotuksia]*
-   - ehdotuksissa pitäisi olla ainakin sana koira ja mahdollisesti muita sanoja, joiden etäisyys koifa-syötteestä on 1.
-   
-   #### Muu tekstisyöte, jota ei voi korjata
-   - syötä sana tai teksti, joka ei muistuta mitään sanaa, esimerkiksi "aaaaaaaaa"
-   - sovelluksen pitäisi tulostaa: *syötit sanan aaaaaaaaa, sanaa ei löytynyt sanastosta*
+### Testitapaukset:
+ <u> Sanan tarkistus: <u> 
+1.) Virheetön sana
+- syötä sanastossa oleva sana (esimerkiksi "koira") tekstikenttään.
+- sovelluksen pitäisi tulostaa: syötit sanan koira (ei kirjoitusvirheitä)
 
- 
-### 2.) Sanan lisääminen sanakirjaan:
-Kun olet pyytänyt sanan korjaamista, pyydä sovellusta lisäämään seuraavat sanat:
+2.) Sana, jossa on pieni kirjoitusvirhe
+- syötä sana, jossa on pieni kirjoitusvirhe ("esimerkiksi "koifa).
+- sovelluksen pitäisi tulostaa: syötit sanan koifa, tarkoititko [lista ehdotuksia]
+- ehdotuksissa pitäisi olla ainakin sana koira ja mahdollisesti muita sanoja, joiden etäisyys koifa-syötteestä on 1.
 
-**a) sana, joka on jo sanastossa (esimerkiksi pankkiiri)**
+3.) Virheellinen teksti
+- syötä sana tai teksti, joka ei muistuta mitään sanaa, esimerkiksi ("aaaaaaaaa)
+- sovelluksen pitäisi tulostaa: syötit sanan aaaaaaaaa, sanaa ei löytynyt sanastosta
 
-   - sovelluksen pitäisi tulostaa: *valitettavasti sanaa ei voitu lisätä sanastoon*
+<u> Sanan lisääminen sanakirjaan: <u> 
+- kun olet pyytänyt sanan korjaamista, pyydä sovellusta lisäämään seuraavat sanat
+a) sana, joka on jo sanastossa (esimerkiksi pankkiiri)
+- sovelluksen pitäisi tulostaa: valitettavasti sanaa ei voitu lisätä sanastoon
+b) sana, jota ei löytynyt korjauksessa sanastosta
+- sovelluksen pitäisi tulostaa: sana lisätty sanastoon!
 
-**b) sana, jota ei löytynyt korjauksessa sanastosta**
-
-   - sovelluksen pitäisi tulostaa: *sana lisätty sanastoon!*
-
-
-### 3.) Pitemmän tekstin korjaaminen
-   #### Virheetön teksti 
-   - syötä teksi, jossa on ei ole kirjoitusvirheitä. Koska sanastossa ei välttämättä ole kaikkia taivutusmuotoja, syötä teksti, jossa sanat ovat perusmuodossa, esimerkiksi: hei maailma!
-   - sovelluksen pitäisi antaa teksti samassa muodossa kuin se annettiin
-   #### Teksti, jossa on typoja
-   - syötä teksti, joka sisältää pieniä kirjoitusvirheitä (esimerkiksi heip maailma!)
-   - sovelluksen pitäisi palauttaa korjattu teksti ("hei maailma!") ja ilmoitus: *Korjaus onnistui!*
-   #### Virheellinen teksti, jossa ei oikeita sanoja
-   - syötä jokin teksti, joka ei muistuta mitään oikeita sanoja (esimerkiksi aaaaaaaa)
-   - sovelluksen pitäisi palauuttaa muokkaamaton teksti ja ilmoitus: *Kaikkia sanoja ei voitu korjata"*
+<u> Pitemmän tekstin korjaaminen <u> 
+1.) Virheetön teksti 
+- syötä teksi, jossa on ei ole kirjoitusvirheitä. Koska sanastossa ei välttämättä ole kaikkia taivutusmuotoja, syötä teksti, jossa sanat ovat perusmuodossa, esimerkiksi: hei maailma!
+- sovelluksen pitäisi antaa teksti samassa muodossa kuin se annettiin
+2.) Teksti, jossa on typoja
+- syötä teksti, joka sisältää pieniä kirjoitusvirheitä ("esimerkiksi heip maailma!)
+- sovelluksen pitäisi antaa teksti korjattuna: hei maailma!
+3.) Virheellinen teksti, jossa ei oikeita sanoja
+- syötä jokin teksti, joka ei muistuta mitään oikeita sanoja (esimerkiksi aaaaaaaa)
+- sovelluksen pitäisi antaa teksti muokkaamattomana ja ilmoitus: "Kaikkia sanoja ei tunnistettu eikä niitä voitu korjata"
 
 
 ## Suoritusaikaa mittaavat testit
 
-Algoritmeja on testattu ajamalla manuaalisesti testejä, joissa annetaan suuria syötteitä algoritmeille. Tällä tutkitaan sitä, pystyvätkö algoritmit käsittelemään pitkiä syötteitä useita kertoja. Testaus on tehty, jotta pitemmän tekstin korjaus -ominaisuus toimisi odotetulla tavalla.
+Algoritmeja on testattu ajamalla manuaalisesti testejä, joissa annetaan suuria syötteitä algoritmeille. Tällä tutkitaan sitä, pystyvätkö algoritmit käsittelemään pitkiä syötteitä useita kertoja. Testaus on tehty, jotta pitemmän tekstin korjausominaisuus toimisi odotetulla tavalla.
 
 ## Trie
 **Trie-luokalle on tehty seuraavanlaisia testejä:**

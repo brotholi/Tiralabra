@@ -1,6 +1,6 @@
 # Käyttöohje
 
-Kun olet kloonannut repositorion omalle koneellesi, käynnistä virtuaaliymäristö projektin juurihakemistossa komennolla
+Kun olet kloonannut repositorion omalle koneellesi, käynnistä poetry projektin juurihakemistossa komennolla
 
 ```bash
 poetry shell
