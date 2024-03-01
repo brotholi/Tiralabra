@@ -58,6 +58,7 @@ Kun tekstiä muistuttavia sanoja ei löydetä, annetaan ilmoitus "sanaa ei löyt
 
 ### Pitemmän tekstin korjaaminen
 Etusivun alempaan kenttään voi syöttää pitemmän tekstin, joka saa olla 2-100 merkkiä pitkä. Korjaus käynnistyy painamalla korjaa-nappia:
+
 ![image](https://github.com/brotholi/tiralabra/assets/91954165/52e865b3-e6dd-49aa-9479-c3937ce4e9e2)
 
 Korjaus tulostetaan tekstikenttään, jota voi muokata. Tekstin voi kopioida painamalla kopioi-nappia:
