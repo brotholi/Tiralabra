@@ -30,7 +30,7 @@ Tämä on Helsingin yliopiston Tietojenkäsittelytieteen kandiohjelman Algoritmi
 
 
 
-# Käyttöohje
+# Asennus- ja käynnistysohje
 
 Kun olet kloonannut repositorion omalle koneellesi, käynnistä poetry projektin juurihakemistossa komennolla
 
