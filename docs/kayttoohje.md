@@ -39,7 +39,8 @@ Typotarkistin sovelluksen käyttöliittymällä voi syöttää korjattavaksi jok
 ### Sanan korjaaminen 
 Yhden sanan tekstikenttään voi syöttää 2-20 merkkiä pitkän merkkijonon, joka tarkistetaan painamalla tarkista nappia:
 
-![image](https://github.com/brotholi/tiralabra/assets/91954165/27e4cfbb-8603-465b-a78c-9031c1882147)
+![image](https://github.com/brotholi/tiralabra/assets/91954165/364b351c-4ec8-426d-b732-2d70195b72ed)
+
 
 Sovellus antaa tämän jälkeen ilmoituksen siitä, onko syötetty sana oikein. Listattuna ovat kaikki triestä löytyneet tekstisyötettä muistuttavat sanat:
 
