@@ -69,7 +69,8 @@ Korjaus tulostetaan tekstikenttään, jota voi muokata. Tekstin voi kopioida pai
 Jos kaikkea ei pystytty korjaamaan, annetaan palaute "Kaikkia sanoja ei voitu korjata":
 
 
-![image](https://github.com/brotholi/tiralabra/assets/91954165/13da7982-9b96-4dd3-a5c7-96f4127418d4)
+![image](https://github.com/brotholi/tiralabra/assets/91954165/833682f4-d4b9-4d4d-b55c-eb8486da16f5)
+
 
 
 ## Sanan lisääminen sanastoon
