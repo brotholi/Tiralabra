@@ -12,6 +12,8 @@ Tämä on Helsingin yliopiston Tietojenkäsittelytieteen kandiohjelman Algoritmi
 
 [Toteutusraportti](./docs/toteutusraportti.md)
 
+[Käyttöohje](./docs/kayttoohje.md)
+
 
 ## Viikkoraportit
 [Viikko 1](./docs/viikkoraportit/viikkoraportti1.md)
