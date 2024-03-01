@@ -15,13 +15,13 @@ Testit ajettu 1.3.2024
 Sovellukselle on tehty käyttöliittymältä manuaalista testausta antamalla sille erilaisia tekstisyötteitä ja varmistamalla, että sana joko tunnistetaan tai annetaan korjausehdotus. Myös sanan lisäämistä sanastoon on testattu.
 
 ### Testitapaukset:
- <u> Sanan tarkistus: <u> 
+Sanan tarkistus:
 1.) Virheetön sana
 - syötä sanastossa oleva sana (esimerkiksi "koira") tekstikenttään.
 - sovelluksen pitäisi tulostaa: syötit sanan koira (ei kirjoitusvirheitä)
 
 2.) Sana, jossa on pieni kirjoitusvirhe
-- syötä sana, jossa on pieni kirjoitusvirhe ("esimerkiksi "koifa).
+- syötä sana, jossa on pieni kirjoitusvirhe (esimerkiksi koifa).
 - sovelluksen pitäisi tulostaa: syötit sanan koifa, tarkoititko [lista ehdotuksia]
 - ehdotuksissa pitäisi olla ainakin sana koira ja mahdollisesti muita sanoja, joiden etäisyys koifa-syötteestä on 1.
 
