@@ -37,7 +37,7 @@ Typotarkistin sovelluksen käyttöliittymällä voi syöttää korjattavaksi jok
 ## Korjaaminen
 
 ### Sanan korjaaminen 
-Yhden sanan tekstikenttään voi syöttää 2-20 merkkiä pitkän merkkijonon, joka tarkistetaan painamalla tarkista nappia:
+Yhden sanan tekstikenttään voi syöttää 2-20 merkkiä pitkän merkkijonon, joka tarkistetaan painamalla tarkista-nappia:
 
 ![image](https://github.com/brotholi/tiralabra/assets/91954165/8f663963-8426-4c0e-95ec-89755f1e7041)
 
@@ -51,7 +51,8 @@ Jo sana on syötetty oikein, annetaan palaute tästä:
 
 ![image](https://github.com/brotholi/tiralabra/assets/91954165/6fc2ae67-6bc0-4938-901d-8aca7cf08da5)
 
-Kun tekstiä muistuttavia sanoja ei löydetä, annetaan ilmoitus "sanaa ei löytynyt sanastosta:
+Kun tekstiä muistuttavia sanoja ei löydetä, annetaan ilmoitus "sanaa ei löytynyt sanastosta":
+
 ![image](https://github.com/brotholi/tiralabra/assets/91954165/ad3f857a-7aa7-4336-b49e-2c32f97547d9)
 
 
@@ -60,9 +61,12 @@ Etusivun alempaan kenttään voi syöttää pitemmän tekstin, joka saa olla 2-1
 ![image](https://github.com/brotholi/tiralabra/assets/91954165/52e865b3-e6dd-49aa-9479-c3937ce4e9e2)
 
 Korjaus tulostetaan tekstikenttään, jota voi muokata. Tekstin voi kopioida painamalla kopioi-nappia:
+
 ![image](https://github.com/brotholi/tiralabra/assets/91954165/1a1f6e14-a0dd-4acb-a61b-088c70d5208f)
 
+
 Jos kaikkea ei pystytty korjaamaan, annetaan palaute "Kaikkia sanoja ei voitu korjata":
+
 
 ![image](https://github.com/brotholi/tiralabra/assets/91954165/13da7982-9b96-4dd3-a5c7-96f4127418d4)
 
@@ -70,8 +74,10 @@ Jos kaikkea ei pystytty korjaamaan, annetaan palaute "Kaikkia sanoja ei voitu ko
 ## Sanan lisääminen sanastoon
 Sanan voi lisätä sanastoon, kun on ensin pyytänyt sen korjausta. Painamalla lisää-nappia voidaan pyytää sanan lisäämistä sanastoon:
 
+
 ![image](https://github.com/brotholi/tiralabra/assets/91954165/3c0c5fc4-b76b-4c9b-a298-0db3c468d5ef)
 
 Sana lisätään sanastoon vain silloin, kun sitä ei ollut sanastossa aiemmin: 
+
 
 ![image](https://github.com/brotholi/tiralabra/assets/91954165/d6913ad7-c122-4c4e-aba9-6ee81dbaee57)
