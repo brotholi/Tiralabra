@@ -39,16 +39,17 @@ Typotarkistin sovelluksen käyttöliittymällä voi syöttää korjattavaksi jok
 ### Sanan korjaaminen 
 Yhden sanan tekstikenttään voi syöttää 2-20 merkkiä pitkän merkkijonon, joka tarkistetaan painamalla tarkista nappia:
 
-![image](https://github.com/brotholi/tiralabra/assets/91954165/364b351c-4ec8-426d-b732-2d70195b72ed)
+![image](https://github.com/brotholi/tiralabra/assets/91954165/8f663963-8426-4c0e-95ec-89755f1e7041)
 
 
 Sovellus antaa tämän jälkeen ilmoituksen siitä, onko syötetty sana oikein. Listattuna ovat kaikki triestä löytyneet tekstisyötettä muistuttavat sanat:
 
-![image](https://github.com/brotholi/tiralabra/assets/91954165/04657ade-0b9c-4d71-b643-6af1ddefc2a1)
+![image](https://github.com/brotholi/tiralabra/assets/91954165/5f7c3cd6-1f49-44be-9218-b039ad794744)
+
 
 Jo sana on syötetty oikein, annetaan palaute tästä: 
 
-![image](https://github.com/brotholi/tiralabra/assets/91954165/949735fd-da65-442c-8299-7f5b4dea55d2)
+![image](https://github.com/brotholi/tiralabra/assets/91954165/6fc2ae67-6bc0-4938-901d-8aca7cf08da5)
 
 Kun tekstiä muistuttavia sanoja ei löydetä, annetaan ilmoitus "sanaa ei löytynyt sanastosta:
 ![image](https://github.com/brotholi/tiralabra/assets/91954165/16ef68c5-6783-4c5d-a855-e07b47091211)
