@@ -1,5 +1,7 @@
 # Käyttöohje
 
+# Asennus ja käynnistys
+
 Kun olet kloonannut repositorion omalle koneellesi, käynnistä poetry projektin juurihakemistossa komennolla
 
 ```bash
@@ -18,6 +20,8 @@ poetry run invoke start
 ```	
 
 Sovelluksen web-käyttöliittymä aukeaa terminaalin antamaan osoitteeseen, josta klikkaamalla pääsee etusivulle. Lokaalisti pyörivän sovelluksen saa suljettua antamalla terminaaliin ctrl + C.
+
+# Testit
 
 Jos haluat ajaa sovellukselle yksikkötestejä, sen voi tehdä komennolla
 
