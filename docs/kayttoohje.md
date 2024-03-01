@@ -73,7 +73,7 @@ Jos kaikkea ei pystytty korjaamaan, annetaan palaute "Kaikkia sanoja ei voitu ko
 
 
 ## Sanan lisääminen sanastoon
-Sanan voi lisätä sanastoon, kun on ensin pyytänyt sen korjausta. Painamalla lisää-nappia voidaan pyytää sanan lisäämistä sanastoon:
+Sanan voi lisätä sanastoon, kun on ensin pyytänyt sen korjausta. Painamalla lisää sana -nappia voidaan pyytää sanan lisäämistä sanastoon:
 
 
 ![image](https://github.com/brotholi/tiralabra/assets/91954165/3c0c5fc4-b76b-4c9b-a298-0db3c468d5ef)
