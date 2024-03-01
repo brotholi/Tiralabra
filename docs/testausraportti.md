@@ -6,8 +6,8 @@ Yksikkötesteissä on käytetty unnittest-kirjastoa ja ne on suunniteltu suorite
 
 **Testikattavuusraportti**
 
-![image](https://github.com/brotholi/tiralabra/assets/91954165/400f6665-97d0-45ef-9097-10d5cee1a175)
-
+![image](https://github.com/brotholi/tiralabra/assets/91954165/04fe9222-5ce2-4f3f-abee-b34efb94bce3)
+Testit ajettu 1.3.2024 
 
 ## Manuaalinen testaus käyttöliittymältä
 
