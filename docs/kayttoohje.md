@@ -1,6 +1,6 @@
 # Käyttöohje
 
-# Asennus ja käynnistys
+## Asennus ja käynnistys
 
 Kun olet kloonannut repositorion omalle koneellesi, käynnistä poetry projektin juurihakemistossa komennolla
 
@@ -21,7 +21,7 @@ poetry run invoke start
 
 Sovelluksen web-käyttöliittymä aukeaa terminaalin antamaan osoitteeseen, josta klikkaamalla pääsee etusivulle. Lokaalisti pyörivän sovelluksen saa suljettua antamalla terminaaliin ctrl + C.
 
-# Testit
+## Testit
 
 Jos haluat ajaa sovellukselle yksikkötestejä, sen voi tehdä komennolla
 
@@ -35,12 +35,12 @@ Testikattavuusraportin voi muodostaa komennolla
 poetry run invoke coverage
 ```
 
-# Sovelluksen käyttö
+## Sovelluksen käyttö
 Typotarkistin sovelluksen käyttöliittymällä voi syöttää korjattavaksi joko yhden sanan tai pitemmän tekstin. Molemmat syöttökentät ovat etusivulla.
 
-## Korjaaminen
+### Korjaaminen
 
-### Sanan korjaaminen 
+#### Sanan korjaaminen 
 Yhden sanan tekstikenttään voi syöttää 2-20 merkkiä pitkän merkkijonon, joka tarkistetaan painamalla tarkista-nappia:
 
 ![image](https://github.com/brotholi/tiralabra/assets/91954165/8f663963-8426-4c0e-95ec-89755f1e7041)
@@ -60,7 +60,7 @@ Kun tekstiä muistuttavia sanoja ei löydetä, annetaan ilmoitus "sanaa ei löyt
 ![image](https://github.com/brotholi/tiralabra/assets/91954165/ad3f857a-7aa7-4336-b49e-2c32f97547d9)
 
 
-### Pitemmän tekstin korjaaminen
+#### Pitemmän tekstin korjaaminen
 Etusivun alempaan kenttään voi syöttää pitemmän tekstin, joka saa olla 2-100 merkkiä pitkä. Korjaus käynnistyy painamalla korjaa-nappia:
 
 ![image](https://github.com/brotholi/tiralabra/assets/91954165/52e865b3-e6dd-49aa-9479-c3937ce4e9e2)
@@ -77,7 +77,7 @@ Jos kaikkea ei pystytty korjaamaan, annetaan palaute "Kaikkia sanoja ei voitu ko
 
 
 
-## Sanan lisääminen sanastoon
+#### Sanan lisääminen sanastoon
 Sanan voi lisätä sanastoon, kun on ensin pyytänyt sen korjausta. Painamalla lisää sana -nappia voidaan pyytää sanan lisäämistä sanastoon:
 
 
