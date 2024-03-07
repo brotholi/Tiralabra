@@ -16,7 +16,7 @@ Käyttäjän on myös mahdollista pyytää sanan lisäämistä sanastoon, mikä 
 
 Damerau-Lehvensteinin etäisyyttä tutkivan algoritmin aikavaativuus on lähteiden mukainen O(mn), missä m ja n ovat verrattavien merkkijonojen pituuksia.
 
-Trien kaikki metodit, etsintä, lisäys ja koko sisällön palauttaminen, vievät aikaa O(n), missä n on avaimen eli käsiteltävän sanan pituus. Trie-rakenne mahdollistaa sanan nopean etsimisen ja tallettamisen, mikä on välttämätöntä, kun käsiteltävä sanasto on suuri.
+Trien kaikki metodit, etsintä, lisäys ja koko sisällön palauttaminen, vievät aikaa O(n), missä n on avaimen eli käsiteltävän sanan pituus. Trie-rakenne mahdollistaa sanan nopean etsimisen ja tallettamisen, mikä on välttämätöntä, kun käsiteltävä sanasto on suuri. Trien tilavaativuus on samaten lähteiden mukaan O(n).
 
 
 
