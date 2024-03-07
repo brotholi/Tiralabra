@@ -40474,3 +40474,5 @@ aaaaaaaa
 minulla
 tarkista
 koiralla
+koodasin
+tietokoneen
