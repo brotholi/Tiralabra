@@ -7,9 +7,9 @@ Typotarkistin
 {% block content %}
 <h2> Kirjoitusvirheiden korjaaja </h2>
 <p>Tarkista typot joko yksittäisestä sanasta tai korjaa ne suoraan pitemmästä tekstistä.</p>
-<h3>Tarkista sana (enintään 20 merkkiä):</h3>
+<h3>Tarkista sana (enintään 30 merkkiä):</h3>
 <form action="/check" method="POST" onsubmit="return check(this)">
-    <textarea id="textbox" name="input" rows="3" cols="30" maxlength="20"></textarea><br><br>
+    <textarea id="textbox" name="input" rows="3" cols="30" maxlength="30"></textarea><br><br>
     <input type="submit" class="button" value="Tarkista">
 </form>
 <br>

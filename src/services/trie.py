@@ -86,7 +86,7 @@ class Trie:
             self._dfs(child, prev + node.letter)
 
     def get_trie_content(self) -> list:
-        """Metodi, joka palauttaa koko trie-tietorakenteen sisällön
+        """Metodi, joka palauttaa kaikki trie-tietorakenteessa olevat sanat listana
 
         Returns:
             list: trie-tietorakenteen sisältö

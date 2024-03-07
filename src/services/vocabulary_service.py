@@ -1,13 +1,13 @@
-import csv
 from services.trie import Trie
 from services.damerau_levenshtein import DamerauLevenshtein
 
 
 class VocabularyService:
-    """Luokka, joka vastaa sanaston käsittelystä
+    """Luokka, joka vastaa sanaston käsittelystä ja oikeinkirjoituksen tarkistamisesta
 
     Atribuutit:
-        damerau_levenshtein (DamerauLevenshtein): luokka, joka tutkii etäisyyttä kahden merkkijonon välillä
+        damerau_levenshtein (DamerauLevenshtein): luokka, 
+        joka tutkii etäisyyttä kahden merkkijonon välillä
         trie (Trie): trie-tietorakenne, johon sanasto tallennetaan
         file_path (str): tiedostopolku, jossa sanasto sijaitsee
     """
@@ -17,8 +17,9 @@ class VocabularyService:
 
         Args:
             path (str): tiedostopolku, jossa sanasto sijaitsee
-            trie (Trie, optional): trie-tietorakenne, johon sanasto tallennetaan. Defaults to Trie().
-            damerau_levenshtein (DamerauLevenshtein, optional): luokka, joka tutkii etäisyyttä kahden merkkijonon välillä. Defaults to DamerauLevenshtein().    
+            trie (Trie, optional): trie-tietorakenne, johon sanasto tallennetaan.
+            damerau_levenshtein (DamerauLevenshtein, optional): luokka,
+            joka tutkii etäisyyttä kahden merkkijonon välillä.
 
         """
         self.damerau_levenshtein = damerau_levenshtein
@@ -32,7 +33,6 @@ class VocabularyService:
         vocabulary_words = self._read_file()
         for word in vocabulary_words:
             self.trie.add(word.lower())
-        return
 
     def find_word_in_vocabulary(self, word):
         """Metodi, joka etsii sanan sanastosta
@@ -43,6 +43,10 @@ class VocabularyService:
         Returns:
             bool: True, jos sana löytyy, muuten False
         """
+        for letter in word:
+            if letter.isnumeric():
+                return False
+
         return self.trie.search(word.lower())
 
     def _read_file(self):
@@ -56,18 +60,26 @@ class VocabularyService:
                 words.append(row.strip())
         return words
 
-    def find_similar_words(self, word, quick_fix=False):
-        """Metodi, joka vertaa annettua sanaa sanaston sanoihin ja palauttaa sanat, joiden etäisyys on 1 tai 0.
+    def find_similar_words(self, word, quick_search=False):
+        """Metodi, joka vertaa annettua sanaa sanaston sanoihin 
+        ja palauttaa sanat, joiden etäisyys on 1 tai 0.
 
         Args:
             word (str): etsittävä sana
-            quick_fix (bool, optional): boolean-arvo, joka määrittää, palautetaanko vain yksi sana. Default-arvo on alse.
+            quick_fix (bool, optional): boolean-arvo, 
+            joka määrittää, palautetaanko vain yksi sana.
 
         Returns:
-            list: lista sanoista, joiden etäisyys damerau-levenshtein-algoritmin mukaan on 1 tai 0
+            list: lista sanoista, joiden etäisyys 
+            damerau-levenshtein-algoritmin mukaan on 1 tai 0
         """
+
         if not word:
             return []
+
+        for word_letter in word:
+            if word_letter.isnumeric():
+                return []
 
         vocabulary = self.trie.get_trie_content()
         similar_words = []
@@ -76,7 +88,7 @@ class VocabularyService:
                 word.strip().lower(), vocabulary_word)
             if distance <= 1 and len(vocabulary_word) >= 2:
                 similar_words.append(vocabulary_word)
-                if quick_fix:
+                if quick_search:
                     return similar_words
         return similar_words
 
@@ -87,7 +99,8 @@ class VocabularyService:
             word (str): lisättävä sana
 
         Returns:
-            bool: True, jos sana lisättiin eikä sanaa ollut ennestään sanastossa, muuten False
+            bool: True, jos sana lisättiin 
+            eikä sanaa ollut ennestään sanastossa, muuten False
         """
         if not word:
             return False
@@ -133,7 +146,8 @@ class VocabularyService:
             words (list): lista sanoista
         Returns:
             list: korjatut sanat
-            bool: boolean-arvo, joka kertoo, voitiinko kaikki sanat korjata
+            bool: boolean-arvo, joka kertoo, 
+            voitiinko kaikki sanat korjata
         """
         if not words:
             return [[], True]

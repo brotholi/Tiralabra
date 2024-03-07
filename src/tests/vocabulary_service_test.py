@@ -18,10 +18,10 @@ class TestVocabularyService(unittest.TestCase):
     def create_test_file(self):
         with open("src/data/sanasto_test.txt", "w") as file:
             file.write("kissa\nkoira\nkana\nkaali\nkarpalo\nkala\n")
-        
+
     def tearDown(self) -> None:
         open("src/data/sanasto_test.txt", 'w').close()
-        
+
     def test_find_similar_words_with_none(self):
         similar_words = self.vocabulary_service.find_similar_words(None)
         self.damerau_levenshtein_mock.distance.assert_not_called()
@@ -36,9 +36,19 @@ class TestVocabularyService(unittest.TestCase):
         self.damerau_levenshtein_mock.distance.assert_not_called()
         self.assertEqual(similar_words, [])
 
+    def test_find_similar_words_with_numeric_input(self):
+        similar_words = self.vocabulary_service.find_similar_words("123")
+        self.damerau_levenshtein_mock.distance.assert_not_called()
+        self.assertEqual(similar_words, [])
+
     def test_find_word_in_vocabulary(self):
         self.vocabulary_service.find_word_in_vocabulary("kissa")
         self.trie_mock.search.assert_called()
+
+    def test_find_word_in_vocabulary_with_numeric_input(self):
+        self.assertFalse(
+            self.vocabulary_service.find_word_in_vocabulary("123"))
+        self.trie_mock.search.assert_not_called()
 
     def test_add_word_to_vocabulary_with_none(self):
         times_called = self.trie_mock.add.call_count
@@ -80,17 +90,19 @@ class TestVocabularyService(unittest.TestCase):
             ["kisda,", "koiru,", "kalak."])[0], ["kissa,", "koira,", "kala."])
         self.assertEqual(self.vocabulary_service.fix_typos(
             ["kissantassu", "ja", "koira"])[0], ["kissantassu", "ja", "koira"])
-        
+
     def test_fix_typos_with_words_that_can_be_corrected_does_not_return_unable_to_correct(self):
-        self.assertFalse(self.vocabulary_service.fix_typos(["kissa", "koira"])[1])
+        self.assertFalse(
+            self.vocabulary_service.fix_typos(["kissa", "koira"])[1])
         self.assertFalse(self.vocabulary_service.fix_typos(
             ["kisda,", "koiru,", "kalak."])[1])
         self.assertTrue(self.vocabulary_service.fix_typos(
             ["kissantassu", "ja", "koira"])[1])
-        
+
     def test_fix_typos_with_words_that_cannot_be_corrected_returns_unable_to_correct(self):
         self.assertTrue(self.vocabulary_service.fix_typos(["aaaaaaaaa"])[1])
-        self.assertTrue(self.vocabulary_service.fix_typos(["hei", "asdfghjkl"])[1])
+        self.assertTrue(self.vocabulary_service.fix_typos(
+            ["hei", "asdfghjkl"])[1])
 
     def test_fix_typos_with_empty_list(self):
         self.assertEqual(self.vocabulary_service.fix_typos([])[0], [])

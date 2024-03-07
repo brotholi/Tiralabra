@@ -40476,3 +40476,8 @@ tarkista
 koiralla
 koodasin
 tietokoneen
+todennäköisyyslaskenta
+pyyhkäisyelektronimikroskooppi
+elintarviketurvallisuusvirasto
+paikallispuolustusjärjestelmä
+ylioppilastutkintolautakunta

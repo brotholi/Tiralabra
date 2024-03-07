@@ -199,6 +199,8 @@ valid-metaclass-classmethod-first-arg=cls
 
 [DESIGN]
 
+disable=too-few-public-methods
+
 max-args=7
 max-attributes=8
 max-bool-expr=5
