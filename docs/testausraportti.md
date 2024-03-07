@@ -5,10 +5,9 @@
 Yksikkötesteissä on käytetty unnittest-kirjastoa ja ne on suunniteltu suoritettavaksi src/services hakemiston koodille, joka sisältää tällä hetkellä luokat vocabolary_service, trie, damerau_levenshtein. Nämä luokat on valittu testaukseen, koska ne sisältävät varsinaisen ohjelmalogiikan, kun taas käyttölittymään liittyvä koodi on jätetty yksikkötestauksen ulkopuolelle.
 
 **Testikattavuusraportti**
+![image](https://github.com/brotholi/tiralabra/assets/91954165/4f7b3f71-b8ed-4101-aadd-369830c433e6)
 
-![image](https://github.com/brotholi/tiralabra/assets/91954165/04fe9222-5ce2-4f3f-abee-b34efb94bce3)
-
-Testit ajettu 1.3.2024 
+Testit ajettu 7.3.2024 
 
 ## Manuaalinen testaus käyttöliittymältä
 
