@@ -31,10 +31,10 @@ Sovellukselle on tehty käyttöliittymältä manuaalista testausta antamalla sil
 ### 2.) Sanan lisääminen sanakirjaan:
 Kun olet pyytänyt sanan korjaamista, pyydä sovellusta lisäämään seuraavat sanat:
 
-#### sana, joka on jo sanastossa (esimerkiksi pankkiiri)**
+#### sana, joka on jo sanastossa (esimerkiksi pankkiiri)
 - sovelluksen pitäisi tulostaa: *valitettavasti sanaa ei voitu lisätä sanastoon*
 
-#### sana, jota ei löytynyt korjauksessa sanastosta**
+#### sana, jota ei löytynyt korjauksessa sanastosta
    - sovelluksen pitäisi tulostaa: *sana lisätty sanastoon!*
 
      
